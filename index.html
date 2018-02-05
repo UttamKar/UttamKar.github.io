@@ -7,102 +7,341 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="a/jquery-ui-darkness.min.css">
-    <!-- <link rel="stylesheet" href="css/jquery.datetimepicker.min.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="bg-one">
+        <div class="">
+            
+            <nav class="navbar navbar-default" id="navBar">
+                <div>
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+
+                       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><a href="#"><img id="logo" src="img/logo.png" alt=""></a></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+
+                        <ul class="nav navbar-nav navbar-right" id="navPosition">
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">EXPORTER</a></li>
+                            <li><a href="#">TEAMS</a></li>
+                            <li><a href="#">WORKS</a></li>
+                            <li><a href="#">PEOPLE SAY</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
 
 
 
-<div class="bg-image"></div>
-
-
-
-
-
-
-  
-  <section class="ttSection">
-      <div class="container">
-          <div class="col-md-offset-2 col-md-8">
-             <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">TT Creation</h3>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 text-center" id="contentDiv">
+                    <h2 id="textColor">We Are Awesome Creative Agency</h2>
+                    <hr>
+                    <p id="menuContent">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+                    <br><br>
+                    <a type="button" class="btn btn-md" id="customBtn"><p>LEARN MORE</p></a>
                 </div>
-                <div class="panel-body">
-                    <form action="" method="post" class="form-horizontal">
-                        <div class="form-group">
-                            <label for="title" class="col-md-3 control-label">Title</label>
-                            <div class="col-md-8"><input type="text" id="title" class="form-control"></div>
+            </div>   
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row" id="secondPart">
+            <div class="col-sm-3 col-sm-offset-3">                  
+                <img src="img/image5.png" alt="" class="img-responsive">
+            </div>
+            <div class="col-sm-5">
+                <h4>OUR STORY</h4>
+                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.</p>
+                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <div><a href="#" class="btn btn-md" id="customBtn"><p>LEARN MORE</p></a></div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="storyVideo" class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#"><img width="150" class="aligncenter" src="img/image8.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" style="margin-bottom: 40px;">
+        <div class="row">
+            <div class="text-center">
+                <strong><h4>EXPERTISE</h4></strong>
+                <p>Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8" id="fourthSection">
+                <div class="row text-center">
+                    <div class="col-md-4 expertiseItem" id="customMargin">
+                        <img src="img/1.png" alt="">
+                        <b><h5>WEB DESIGN & DEVELOPMENT</h5></b>
+                        <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+                    </div>
+                    <div class="col-md-4 expertiseItem" id="customMargin">
+                        <img src="img/2.png" alt="">
+                        <b><h5>BRANDING IDENTITY</h5></b>
+                        <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+                    </div>
+                    <div class="col-md-4 expertiseItem" id="customMargin2">
+                        <img src="img/3.png" alt="">
+                        <b><h5>MOBILE APP</h5></b>
+                        <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4 expertiseItem" id="customMargin3">
+                        <img src="img/4.png" alt="">
+                        <b><h5>WEB DESIGN & DEVELOPMENT</h5></b>
+                        <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+                    </div>
+                    <div class="col-md-4 expertiseItem" id="customMargin3">
+                        <img src="img/5.png" alt="">
+                        <b><h5>BRANDING IDENTITY</h5></b>
+                        <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+                    </div>
+                    <div class="col-md-4 expertiseItem">
+                        <img src="img/6.png" id="customMargin4">
+                        <b><h5 id="customMargin-h5">MOBILE APP</h5></b>
+                        <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="team" class="container-fluid">
+        <div class="container">
+
+            <div class="row">
+                <div class="text-center" id="fifthContent">
+                    <h4>MEET OUR AMAZING TEAM</h4>
+                    <p>Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
+                    <hr>
+                </div>
+            </div>
+
+
+            <div class="row text-center" id="middle">
+                <div class="col-md-offset-2 col-md-2 col-sm-3 col-xs-6">
+                    <div class="blockImage">
+                        <img class="img-responsive"  src="img/uttam.jpg" alt="">
+                    </div>
+                    <div id="details">
+                        <b><h4>SEMF UCUK</h4></b>
+                        <h5>CEO & OWNER</h5>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-2 col-xs-6">
+                    <div class="blockImage">
+                        <img class="img-responsive" src="img/uttam.jpg" alt="">
+                    </div>
+                    <div id="details">
+                        <b><h4>SEMF UCUK</h4></b>
+                        <h5>CEO & OWNER</h5>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-2 col-xs-6">
+                    <div class="blockImage">
+                        <img class="img-responsive" src="img/uttam.jpg" alt="">
+                    </div>
+                    <div id="details">
+                        <b><h4>SEMF UCUK</h4></b>
+                        <h5>CEO & OWNER</h5>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-2 col-xs-6">
+                    <div class="blockImage">
+                        <img class="img-responsive" src="img/uttam.jpg" alt="">
+                    </div>
+                    <div id="details">
+                        <b><h4>SEMF UCUK</h4></b>
+                        <h5>CEO & OWNER</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="text-center">
+                    <p id="fifthSection-P">Become part of our dream team, let's join us !</p>
+                    <a href="#" class="btn btn-md" id="customBtn">WE ARE HIRING</a>
+                </div>
+            </div>
+        </div>   
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row" id="imageDiv">
+            <h4 class="col-md-offset-2 col-md-2">OUR WORKS</h4>
+            <a href="#"><p class="col-md-offset-4 col-md-2">See All Project in dribbble<span class="glyphicon glyphicon-menu-right"></span></p></a>
+        </div>
+        <div class="row">
+            <img src="img/image12.png" alt="" width=100%>
+        </div>
+        <div class="row text-center" id="imageDiv">
+            <a href="#" class="btn btn-md" id="customBtn"><p>LOAD MORE</p></a>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="bg-img">
+        <div class="row">
+            <img id="quotation" src="img/quotation.png" alt="" >
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6 text-center" id="txtCol">
+                <p id="sectionSeven">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
+
+                <strong> <h5 id="sectionh5">JANE GALADRIEL</h5> </strong>
+                <h6 id="eco">CEO TENGKUREP</h6>
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <img id="pagingImage" src="img/m1.png" alt="">
+                <img id="pagingImage" src="img/m2.png" alt="">
+                <img id="pagingImage" src="img/m3.png" alt="">
+                <img id="pagingImage" src="img/m4.png" alt="">
+                <img id="pagingImage" src="img/m5.png" alt="">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <form method="POST" >
+                <div class="col-md-offset-2 col-md-4">
+                    <div class="form-group"><h4><label for="controll-label">GIVE US A GOOD NEWS</label></h4></div>
+                    <div class="form-group"><input type="text" placeholder="Name" class="form-control"></div>
+                    <div class="form-group"><input type="email" placeholder="Email" class="form-control"></div>
+                    <div class="form-group"><input type="text" placeholder="Subject" class="form-control"></div>
+                    <div class="form-group"><textarea name="" id="" rows="8" class="form-control" placeholder="Your Message"></textarea></div>
+                    <div><a href="#" class="btn btn-md" id="customBtn"><p>SUBMIT</p></a></div>
+                </div>
+            </form>
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-md-offset-1">
+                        <h4><label for="">OUR HAPPY CLIENT</label></h4>
+                    </div>
+                </div> 
+                <div class="row" id="img-mrgn">
+                    <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-6">
+                        <div> <a href="#"><img src="img/l5.png" alt=""></a> </div>
+                        <div> <a href="#"><img src="img/l4.png" alt=""></a> </div>
+                        <div> <a href="#"><img src="img/l3.png" alt=""></a> </div>
+                        <div> <a href="#"><img src="img/l2.png" alt=""></a> </div>
+                        <div> <a href="#"><img src="img/l1.png" alt=""></a> </div>
+                    </div>
+                    <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-6">
+                        <div> <a href="#"><img src="img/r5.png" alt=""></a> </div>
+                        <div> <a href="#"><img src="img/r4.png" alt=""></a> </div>
+                        <div> <a href="#"><img src="img/r3.png" alt=""></a> </div>
+                        <div> <a href="#"><img src="img/r2.png" alt=""></a> </div>
+                        <div> <a href="#"><img src="img/r1.png" alt=""></a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" style="margin-top: 50px;" id="footer-img">
+        <div class="row" id="footerDiv">
+            <div class="col-md-offset-2 col-md-8">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <img class="" src="img/logo.png" alt="" width="40%">
+                        <p>lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit</p>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <h4>OUR STUDIO</h4>
+                        <!-- <div style="float:left; padding-right: 10px;"><img src="img/location.png" alt=""></div> -->
+                        <div id="location">
+                            <p>Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia</p>
                         </div>
-                        <div class="form-group">
-                            <label for="description" class="col-md-3 control-label">Description</label>
-                            <div class="col-md-8"><textarea id="description" class="form-control" rows="6"></textarea></div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">Create Date</label>
-                            <div class="col-md-8"><input type="text" id="currentDate" class="form-control" readonly = "readonly"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="dueDate" class="col-md-3 control-label">Due Date</label>
-                            <div class="col-md-8"><input type="text" id="datepicker" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="dueDate" class="col-md-3 control-label">Status</label>
-                            <div class="col-md-8">
-                                <select name="" id="" class="form-control">
-                                    <option value="">---Select Status---</option>
-                                    <option value="Open">Open</option>
-                                    <option value="Closed">Closed</option>
-                                    <option value="Deffered">Deffered</option>
-                                    <option value="Clear">Clear</option>
-                                </select>
+                        
+
+                        <div style="float:left; padding-right: 10px;"><img src="img/phone.png" alt=""></div>
+                        <p>(+62) 21-2224 3333</p>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <h4 >STAY IN TOUCH</h4>
+                        <form method="post">
+                            <div class="inputGroup">
+                                <input type="text" placeholder="Subscribe our newsletter">
+                                <a href="#" id="arrow"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                             </div>
+                        </form>
+                        <div id="fontAwesome">
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                         </div>
-                        <div class="col-md-11">
-                        <input type="submit" value="Submit" class="col-md-2 btn btn-success pull-right">
-                        </div>
-                    </form>
+                    </div>
                 </div>
-            </div> 
-          </div>
-      </div>
-  </section>
+                <div class="row" id="footerLast">
+                    <div class="col-md-6 col-xs-12">
+                        <ul>
+                            <li><a href="#">HELP</a></li>
+                            <li><a href="#">TERMS & CONDITIONS</a></li>
+                            <li><a href="#">PRIVACY</a></li>
+                        </ul>
+                    </div>
+                    <div class=" col-md-6 col-xs-12">
+                        <p class="noMargin">Copyright &copy; 2015-Tajem Creative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/vendor/jquery.equalheights.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="a/jquery-ui-1.12.1.min.js"></script>
-    <!-- <script src="js/jquery.datetimepicker.full.min.js"></script> -->
     <script src="js/main.js"></script>
-    <script type="text/javascript">
 
-                /*$('#datetimepicker').datetimepicker();*/
-                $( function() {
-                    $( "#datepicker" ).datepicker();
-                  } );
-
-
-                var currentdate = new Date();
-                var datetime = (currentdate.getMonth()+1) + "/"
-                + currentdate.getDate()  + "/" 
-                + currentdate.getFullYear() + " @ "  
-                + currentdate.getHours() + ":"  
-                + currentdate.getMinutes() + ":" 
-                + currentdate.getSeconds();
-
-                $('#currentDate').val(datetime);
-
-        </script>
 </body>
 </html>
