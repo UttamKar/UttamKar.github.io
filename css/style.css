@@ -10,7 +10,7 @@ body {
 
 
 .bg-one {
-	background-image: url(../img/image9.png);
+	background-image: url(../img/image9.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -123,7 +123,7 @@ hr {
 	color: #00e0d0;
 }
 #storyVideo{
-	background: url('../img/image10.png') no-repeat center top;
+	background: url('../img/image10.jpg') no-repeat center top;
 	margin-bottom: 50px;
 }
 
@@ -170,7 +170,7 @@ hr {
 
 
 #bg-img {
-	background: #382c59 url('../img/image13.png') no-repeat center bottom;
+	background: #382c59 url('../img/image13.jpg') no-repeat center bottom;
 	margin-bottom: 120px;
 }
 
@@ -243,7 +243,7 @@ hr {
 
 
 #footer-img {
-	background: #392e5b url('../img/footer.png') no-repeat center bottom;
+	background: #392e5b url('../img/footer.jpg') no-repeat center bottom;
 }
 
 #footerDiv {
@@ -321,7 +321,7 @@ hr {
 }
 
 #team{
-	background: #4e3b72 url(../img/image11.png) no-repeat center bottom;
+	background: #4e3b72 url(../img/image11.jpg) no-repeat center bottom;
 	margin-top: 50px;
 }
 
@@ -335,7 +335,7 @@ hr {
 
 
 #location {
-	background:url('../img/location.png') no-repeat top left;
+	background:url('../img/location.jpg') no-repeat top left;
 	padding-left: 20px;
 }
 
