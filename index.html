@@ -1,0 +1,108 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>PSD to HTML</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="a/jquery-ui-darkness.min.css">
+    <!-- <link rel="stylesheet" href="css/jquery.datetimepicker.min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+<div class="bg-image"></div>
+
+
+
+
+
+
+  
+  <section class="ttSection">
+      <div class="container">
+          <div class="col-md-offset-2 col-md-8">
+             <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">TT Creation</h3>
+                </div>
+                <div class="panel-body">
+                    <form action="" method="post" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="title" class="col-md-3 control-label">Title</label>
+                            <div class="col-md-8"><input type="text" id="title" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="col-md-3 control-label">Description</label>
+                            <div class="col-md-8"><textarea id="description" class="form-control" rows="6"></textarea></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Create Date</label>
+                            <div class="col-md-8"><input type="text" id="currentDate" class="form-control" readonly = "readonly"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dueDate" class="col-md-3 control-label">Due Date</label>
+                            <div class="col-md-8"><input type="text" id="datepicker" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dueDate" class="col-md-3 control-label">Status</label>
+                            <div class="col-md-8">
+                                <select name="" id="" class="form-control">
+                                    <option value="">---Select Status---</option>
+                                    <option value="Open">Open</option>
+                                    <option value="Closed">Closed</option>
+                                    <option value="Deffered">Deffered</option>
+                                    <option value="Clear">Clear</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-11">
+                        <input type="submit" value="Submit" class="col-md-2 btn btn-success pull-right">
+                        </div>
+                    </form>
+                </div>
+            </div> 
+          </div>
+      </div>
+  </section>
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="a/jquery-ui-1.12.1.min.js"></script>
+    <!-- <script src="js/jquery.datetimepicker.full.min.js"></script> -->
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+
+                /*$('#datetimepicker').datetimepicker();*/
+                $( function() {
+                    $( "#datepicker" ).datepicker();
+                  } );
+
+
+                var currentdate = new Date();
+                var datetime = (currentdate.getMonth()+1) + "/"
+                + currentdate.getDate()  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+
+                $('#currentDate').val(datetime);
+
+        </script>
+</body>
+</html>
