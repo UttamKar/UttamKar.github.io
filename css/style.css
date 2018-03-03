@@ -287,6 +287,11 @@
 	width: 100%;
 	background: rgba(0,0,0,.8);
 }
+.footerSection .form-control {
+	background: rgba(0,0,0,0.7);
+	border-color: rgba(255,255,255,0.5);
+	color: #fff;
+}
 .footerSection #customBtn{
 	margin: 0;
 	padding: 0;
