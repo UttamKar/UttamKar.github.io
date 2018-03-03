@@ -46,7 +46,7 @@
 	width:100%;
 	color: #fff;
 	font-size: 15px;
-	margin-top: 35px;
+	margin-bottom: 35px;
 	width: 100%;
 	letter-spacing: 1px;
 }
@@ -82,9 +82,7 @@
 	transition: 0.5s;
 }
 .signupForm .box .inputBox input:focus ~ label,
-.signupForm .box .inputBox textarea:focus ~ label,
-.signupForm .box .inputBox input:valid ~ label,
-.signupForm .box .inputBox textarea:valid ~ label {
+.signupForm .box .inputBox input:valid ~ label {
 	top: -30px;
 	left: 0;
 	color: #03a9f4;
