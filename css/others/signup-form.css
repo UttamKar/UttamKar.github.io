@@ -62,7 +62,7 @@
 }
 .signupForm .box .inputBox label {
 	position: absolute;
-	top: -10%;
+	top: 0;
 	left: 0;
 	color: #fff;
 	font-size: 15px;
