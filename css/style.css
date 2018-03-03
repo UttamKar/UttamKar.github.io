@@ -288,6 +288,14 @@
 	0%{background-position: 0 0;}
 	100%{background-position: 1171px -639px;} /* img size is 1171x639 */
 }
+.interfaceDesignSection .offer{
+	color: #fff;
+	font-size: 40px;
+	margin: 0;
+	padding: 0;
+	z-index: 2;
+	position: relative;
+}
 .interfaceDesignSection .card {
 	padding: 30px 20px;
 	border-radius: 20px;
