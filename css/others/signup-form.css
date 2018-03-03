@@ -92,7 +92,7 @@
 }
 .signupForm .box .inputBox textarea:focus ~ label,
 .signupForm .box .inputBox textarea:valid ~ label {
-	top: -5px;
+	top: -2px;
 	left: 0;
 	color: #03a9f4;
 	font-size: 15px;
