@@ -1,0 +1,353 @@
+
+.navbar-default{
+	background: rgb(62,48,101);
+	border: none;
+	border-bottom: 4px solid purple;
+	transition: 0.5s;
+}
+.logo img{
+	width: 60%;
+}
+@media screen and (max-width: 767px){
+	.logo img{
+		width: 20%;
+	}
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    transition: .5s;
+    border-bottom: 2px solid transparent;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #00e0d0;
+    border-radius: 20px;
+    border-color: #00e0d0;
+    background: linear-gradient(45deg, purple 30%, transparent 70%);
+}
+
+.headerSection {
+	background: url(../../img/tajem_master/image9.jpg) no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.headerSection .contentDiv{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #fff;
+}
+
+#textColor, #middle {
+	color: #ffffff;
+}
+
+#menuContent {
+	color: #ffffff;
+	font-size: 14px;
+}
+
+hr {
+	background-color: #00e0d0;
+	width: 5% ;
+	margin: 5px auto;
+}
+
+#secondPart {
+	margin-top: 30px; 
+	margin-bottom: 30px; 
+	text-align: justify;
+}
+#customBtn {
+	background-color: transparent;
+	color: #05FA4F;
+	border: 1px solid #00e0d0;
+	margin-bottom: 30px;
+	position: relative;
+	height: 40px;
+	line-height: 25px;
+	width: 150px;
+	overflow: hidden;
+	z-index: 1;
+}
+#customBtn:before {
+	content: '';
+	position: absolute;
+	width:100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #00e0d0;
+	opacity: .2;
+	transition: .5s;
+
+}
+#customBtn:hover:before {
+	top: 40px;
+	left: 150px;
+}
+#customBtn:hover {
+	color: #00e0d0;
+}
+#storyVideo{
+	background: url('../../img/tajem_master/image10.jpg') no-repeat center top;
+	margin-bottom: 50px;
+}
+
+
+#customMargin {
+	box-shadow: 1px 1px 0 #ebebeb;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#customMargin2 {
+	box-shadow: 0 1px #ebebeb;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#customMargin3 {
+	box-shadow: 1px 0 #ebebeb;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#customMargin4 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#customMargin img, #customMargin2 img, #customMargin3 img, #customMargin4 img {
+	margin-bottom: 20px;
+}
+#customMargin h5, #customMargin2 h5, #customMargin3 h5 {
+	margin-bottom: 20px;
+}
+#customMargin-h5 {
+	margin-bottom: 20px;
+}
+
+#fourthSection p {
+	color: #9a9a9a;
+}
+#fourthSection .expertiseItem img{
+	transition: .5s;
+}
+#fourthSection .expertiseItem:hover img {
+	transform: scale(1.5);
+}
+
+
+.sliderSection {
+	background: #382c59 url('../../img/tajem_master/image13.jpg') no-repeat center bottom;
+	background-size: cover;
+	background-attachment: fixed;
+	margin-bottom: 120px;
+	overflow: hidden;
+}
+
+.selection {
+	margin-top: 60px;
+}
+
+#fifthContent {
+	color: #ffffff;
+	padding-top: 40px;
+}
+
+#fifthSection-P {
+	color: #ffffff;
+	margin-bottom: 20px;
+}
+
+#middle {
+	margin:20px 0 ;
+}
+
+.blockImage {
+	background-color: #ffffff;
+}
+.blockImage img{
+	width: 100%;
+}
+
+#details {
+	background-color: transparent;
+	border: 1px solid #ffffff;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+#imageDiv{
+	margin-top: 80px;
+	margin-bottom: 60px;
+}
+
+#quotation {
+	display: block;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+
+#txtCol {
+	color: #ffffff;
+	margin-top: 30px;
+}
+
+#eco {
+	padding-bottom: 50px;
+}
+
+#pagingImage {
+	padding: 5px;
+	margin-bottom: 10px;
+}
+@media screen and (max-width: 576px){
+	.sliderSection #pagingImage{
+	    display: none;
+	}
+}
+
+.logoSection #img-mrgn img {
+	transition: 0.3s;
+	margin: 30px auto;
+	display: block;
+}
+.logoSection #img-mrgn img:hover {
+	transform: scale(1.1);
+}
+
+.footerSection {
+	background: #392e5b url('../../img/tajem_master/footer.jpg') no-repeat center bottom;
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 50px 0;
+}
+
+
+
+.footerSection h4 {
+	text-align: justify;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.footerSection p{
+	text-align: justify;
+	color: #ffffff;
+}
+.footerSection input{
+	background: transparent;
+	color: #fff;
+	padding-left: 5px;
+}
+
+.footerSection .contactDiv{
+	font-size: 15px;
+}
+.footerSection .contactDiv .fa{
+	margin-right: 10px;
+	color:#00e0d0;
+}
+.footerSection .contactDiv .location{
+	display: flex;
+}
+.footerSection .contactDiv .location p{
+	padding-left: 10px;
+	margin-top: -3px;
+}
+.footerSection .inputGroup {
+	display: inline-block;
+	width: 300px;
+}
+.footerSection .inputGroup input {
+	height: 35px;
+	width: 70%;
+	border-color: #a199b4;
+}
+.footerSection #arrow {
+	width: 25%;
+	padding: 4px 9px 9px;
+	background-color: transparent;
+	color: #fff;
+	font-size: 20px;
+	background: gray;
+}
+
+#fontAwesome .fa {
+	width: 30px;
+	height: 30px;
+	background-color: transparent;
+	color: #ffffff;
+	border: 1px solid #ffffff;
+	border-radius: 150%;
+	padding: 7px 8px;
+	margin-top: 20px;
+	margin-right: 10px;
+	transition: .5s;
+}
+
+#fontAwesome a:hover .fa{
+	color: #00e0d0;
+	border-color: #00e0d0;
+	transform: scale(1.2);
+}
+
+
+#footerLast {
+	margin-top: 30px;
+}
+
+#footerLast a {
+	padding: 5px;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+#footerLast ul li {
+	list-style: none;
+	float: left;
+}
+
+#footerLast ul li a:hover {
+	list-style: none;
+	color: #00e0d0;
+}
+
+.teamSection{
+	background: #4e3b72 url(../../img/tajem_master/image11.jpg) no-repeat center bottom;
+	background-size: cover;
+	background-attachment: fixed;
+	margin-top: 50px;
+}
+@media screen and (max-width: 576px){
+	.teamSection #details h5{
+	    display: none;
+	}
+}
+.clearfix{
+	clear:both;
+}
+.aligncenter{
+	display: block;
+	margin: 100px auto;
+}
+
+
+.noMargin{
+	margin: 0 !important;
+}
+
+@media screen and (max-width: 992px){
+	.expertiseItem{
+		border-bottom: 1px solid red;
+	}
+
+	#img-mrgn a img {
+		width: 50%;
+	}
+}
+
+
