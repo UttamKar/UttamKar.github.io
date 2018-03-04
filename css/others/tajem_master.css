@@ -43,16 +43,20 @@
 	font-size: 40px;
 	cursor: pointer;
 	position: absolute;
-	top: 120%;
+	top: 100%;
 	left: 50%;
 	transform: translateY(-50%, -50%);
 	animation: arrowDown 2s linear infinite;
 }
 @keyframes arrowDown{
-	0%{top: 110%;}
-	30%{top: 120%;}
+	0%{top: 100%;}
 	60%{top: 130%;}
 	100%{top: 130%;}
+}
+@media screen and (max-width: 576px){
+	.headerSection .downArrow{
+		animation: none;
+	}
 }
 #textColor, #middle {
 	color: #ffffff;
