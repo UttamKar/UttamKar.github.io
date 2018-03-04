@@ -265,11 +265,62 @@
 		transform: translateX(-10%);
 	}
 }
+
+/* ===========================================================================
+					 		Search Box
+=========================================================================== */
+.searchSection {
+	padding: 30px 0;
+	background: rgba(0,0,0,.5);
+}
+.searchSection input, .searchSection a {
+	display: inline-block;
+	font-size: 20px;
+	box-sizing: border-box;
+	transition: .5s;
+}
+@media screen and (max-width: 991px) {
+	.searchSection .searchBox {
+		width: 100%;
+	}
+}
+.searchSection .searchBox input[type="text"] {
+	background: #fff;
+	width: 100%;
+	height: 50px;
+	border: none;
+	outline: none;
+	padding: 0 40px;
+	border-radius: 25px;
+	position: relative;
+}
+ .searchSection .searchBox a {
+	background: #ffc107;
+	width: 20%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: none;
+	outline: none;
+	border-radius: 0 25px 25px 0;
+	position: absolute;
+	top:0;
+	right: 10px;
+	color: #fff;
+} 
+.searchSection .searchBox a:hover {
+	background: #ff5722;
+}
+
+.searchOne{
+	z-index: 10;
+}
+
 /* ===========================================================================
 					 Price Table User Interface Design
 =========================================================================== */
 .interfaceDesignSection {
-	padding: 50px;
+	padding: 30px;
 	background: #0f84d4 url('../img/cloud2.png');
 	background-attachment: fixed;
 	animation: animatingThree 18s linear infinite;
@@ -402,6 +453,46 @@
 }
 .option .fa-times{
 	color:red;
+}
+
+/* =========================================================
+						Progress Bar
+========================================================= */
+.progressBar {
+	background: #958743;
+	padding: 50px 0;
+}
+.skillBox h1 {
+	color: #fff;
+}
+.skillBox .skills {
+	margin-bottom: 20px;
+}
+.skillBox .skills h2 {
+	color: #fff;
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-top: 5px;
+}
+.skillBox .skills .progress {
+	border-radius: 10px;
+	border: 2px solid #fff;
+	background: transparent;
+	overflow: hidden;
+	margin: 0;
+}
+.skillBox .skills .progress .percent {
+	text-align: right;
+	color: #fff;
+	padding-right: 10px;
+	border-right: 2px solid #fff;
+	animation: progressbar 0.5s linear infinite;
+	background: linear-gradient(-45deg, rgba(255,255,255,0.25) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.25) 75%, transparent 75%, transparent);
+	background-size: 30px 30px;
+}
+@keyframes progressbar {
+	0%{background-position: 0 0;}
+	100%{background-position: 30px 0;}
 }
 
 /* ===========================================================

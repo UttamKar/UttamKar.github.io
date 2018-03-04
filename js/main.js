@@ -37,7 +37,7 @@ $(document).ready(function(){
 			$('.navbar-default').css({'background': newColor});
 
 		});
-	/*Navbat button toggle*/
+	/*Navbar button toggle*/
 		$('#navBar button').click(function(){
 			$(this).toggleClass('active');
 		});
@@ -50,7 +50,21 @@ $(document).ready(function(){
 	/*pen delayed fadeIn*/
 		$( ".pen" ).slideUp( 300 ).delay( 800 ).fadeIn( 300 );
 
-	
+	/*Search Box*/
+		searchBox();
+		$(window).resize(function() {
+			searchBox();
+		});
+
+		function searchBox() {
+			if($(window).width()<576){
+				$('.searchOne').css({'z-index': '-1'});
+				$('.searchTwo').css({'z-index': '11'});
+			}else{
+				$('.searchTwo').css({'z-index': '9'});
+				$('.searchOne').css({'z-index': '10'});
+			}
+		}
 
 
 });
