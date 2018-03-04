@@ -1,9 +1,5 @@
 jQuery(document).ready(function($){
 	
-	/*Equal Height*/
-	$('#fourthSection > .row > div').equalHeights();
-	
-
 	/*Navbar button toggle*/
 	$('#navBar button').click(function(){
 		$(this).toggleClass('active');
@@ -37,4 +33,28 @@ jQuery(document).ready(function($){
 		$('#navBar button').click(function(){
 			$(this).toggleClass('active');
 		});
-})
+
+
+	/*Equal Height*/
+		$('#fourthSection > .row > div').equalHeights();
+
+	/*parallax effect activation*/
+		$('.parallax-window').parallax();
+
+	/*Wow Js activation*/
+		new WOW().init();
+		
+});
+
+
+
+/*Smooth Scrolling*/
+	$('.slide-section').click(function(e){
+		e.preventDefault();
+
+		var linkHref = $(this).attr('href');
+
+		$('body, html').animate({
+			scrollTop: $(linkHref).offset().top
+		}, 1000);
+	});

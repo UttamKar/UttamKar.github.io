@@ -26,7 +26,6 @@
 }
 
 .headerSection {
-	background: url(../../img/tajem_master/image9.jpg) no-repeat center center;
 	background-size: cover;
 	background-attachment: fixed;
 	height: 100vh;
@@ -40,7 +39,21 @@
 	transform: translateY(-50%);
 	color: #fff;
 }
-
+.headerSection .downArrow{
+	font-size: 40px;
+	cursor: pointer;
+	position: absolute;
+	top: 140%;
+	left: 50%;
+	transform: translateY(-50%, -50%);
+	animation: arrowDown 2s linear infinite;
+}
+@keyframes arrowDown{
+	0%{top: 130%;}
+	30%{top: 140%;}
+	60%{top: 150%;}
+	100%{top: 150%;}
+}
 #textColor, #middle {
 	color: #ffffff;
 }
@@ -140,7 +153,6 @@ hr {
 
 
 .sliderSection {
-	background: #382c59 url('../../img/tajem_master/image13.jpg') no-repeat center bottom;
 	background-size: cover;
 	background-attachment: fixed;
 	margin-bottom: 120px;
@@ -220,10 +232,10 @@ hr {
 }
 
 .footerSection {
-	background: #392e5b url('../../img/tajem_master/footer.jpg') no-repeat center bottom;
 	background-size: cover;
 	background-attachment: fixed;
 	padding: 50px 0;
+	margin-top: 50px;
 }
 
 
@@ -237,6 +249,7 @@ hr {
 .footerSection p{
 	text-align: justify;
 	color: #ffffff;
+	font-size: 15px;
 }
 .footerSection input{
 	background: transparent;
@@ -317,7 +330,6 @@ hr {
 }
 
 .teamSection{
-	background: #4e3b72 url(../../img/tajem_master/image11.jpg) no-repeat center bottom;
 	background-size: cover;
 	background-attachment: fixed;
 	margin-top: 50px;
