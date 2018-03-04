@@ -43,16 +43,16 @@
 	font-size: 40px;
 	cursor: pointer;
 	position: absolute;
-	top: 140%;
+	top: 120%;
 	left: 50%;
 	transform: translateY(-50%, -50%);
 	animation: arrowDown 2s linear infinite;
 }
 @keyframes arrowDown{
-	0%{top: 130%;}
-	30%{top: 140%;}
-	60%{top: 150%;}
-	100%{top: 150%;}
+	0%{top: 110%;}
+	30%{top: 120%;}
+	60%{top: 130%;}
+	100%{top: 130%;}
 }
 #textColor, #middle {
 	color: #ffffff;
