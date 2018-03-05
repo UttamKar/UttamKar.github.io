@@ -43,7 +43,7 @@
 	font-size: 40px;
 	cursor: pointer;
 	position: absolute;
-	top: 100%;
+	bottom: 10%;
 	left: 50%;
 	transform: translateY(-50%, -50%);
 	animation: arrowDown 2s linear infinite;
