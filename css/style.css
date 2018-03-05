@@ -355,10 +355,14 @@
 }
 .workSection .single-box .workImg:hover img{
 	opacity: 0.5;
-}
-@media (max-width: 768px) and (min-width: 576px){
-	.workSection .single-box img{
+} 
+
+@media (max-width: 768px) and (min-width: 400px){
+	.workSection .single-box .workImg img{
 	    width: 50%;
+	}
+	.workSection .single-box .workImg .fa{
+		left: 60%;
 	}
 }
 .workSection .single-box h2{
