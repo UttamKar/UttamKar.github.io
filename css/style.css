@@ -367,7 +367,30 @@
 					 Work Section
 =========================================================== */
 .workSection {
-	margin: 50px 0;
+	padding: 50px 0 100px;
+	background: #ccc;
+}
+.workSection h1 {
+	font-size: 8em;
+	color: #fff;
+	font-family: arial;
+	font-weight: bold;
+	transition: 0.5s;
+	 background: url('../img/cloud.jpg');
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: animatingThree 18s linear infinite;
+}
+.workSection h1:hover {
+	text-shadow: 0 1px 0 #ccc, 0 1px 15px rgba(0,0,0,.3), 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc, 0 10px 0 #ccc, 0 11px 0 #ccc, 0 12px 0 #ccc, 0 20px 30px rgba(0,0,0,.5);
+}
+@media screen and (max-width: 1200px) {
+	.workSection h1 {
+		font-size: 4em;
+	}
+	.workSection h1:hover {
+		text-shadow: 0 1px 0 #ccc, 0 1px 15px rgba(0,0,0,.2), 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 #ccc, 0 15px 20px rgba(0,0,0,.5);
+}
 }
 .workSection .single-box{
 	box-shadow: 10px 10px 15px #ccc;
@@ -376,6 +399,7 @@
 	padding-right: 10px;
 	padding-left: 10px;
 	transition: 0.5s;
+	margin-bottom: 20px;
 }
 .workSection .single-box .workImg{
 	position: relative;
