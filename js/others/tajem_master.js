@@ -1,10 +1,9 @@
 jQuery(document).ready(function($){
 	
 	/*Navbar button toggle*/
-	$('#navBar button').click(function(){
-		$(this).toggleClass('active');
-	});
-
+		$('#navBar button').click(function(){
+			$(this).toggleClass('active');
+		});;
 	
 
 
@@ -29,10 +28,7 @@ jQuery(document).ready(function($){
 			console.log(newColor);
 
 		});
-	/*Navbar button toggle*/
-		$('#navBar button').click(function(){
-			$(this).toggleClass('active');
-		});
+	
 
 
 	/*Equal Height*/

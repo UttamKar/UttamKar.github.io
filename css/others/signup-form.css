@@ -30,6 +30,8 @@
 @media only screen and (max-width: 576px) {
 	.signupForm .box {
 		width: 90%;
+		border-left: 2px solid #f8f8f8;
+		border-right: 2px solid #f8f8f8;
 	}
 }
 .signupForm .box h2 {

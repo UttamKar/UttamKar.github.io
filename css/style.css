@@ -50,9 +50,9 @@
 }
 @media screen and (max-width: 767px){
 	.navbar-default .navbar-nav > li > a:hover {
-    border-radius: 0;
-    border-color: transparent;
-	}
+	    border-radius: 0;
+	    border-color: transparent;
+		}
 }
 .hide-menu {
 	transform: translateY(-100%);
@@ -316,9 +316,56 @@
 	z-index: 10;
 }
 
-/* ===========================================================================
+/* ===========================================================
+				Social Icon SideBar Section
+=========================================================== */
+.socialIconSidebar ul {
+	position: fixed;
+	top: 50%;
+	transition: 0.5s;
+	transform: translate(-100%, -50%);
+	z-index: 22;
+}
+.socialIconSidebar ul li a{
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	display: block;
+	font-size: 30px;
+	color: #fff;
+	transition: 0.5s;
+}
+.socialIconSidebar ul li a:hover{
+	color: #000;
+}
+.socialIconSidebar ul li:nth-child(1) a{
+	border-top-right-radius: 10px;
+	background: #3b5999;
+}
+.socialIconSidebar ul li:nth-child(6) a{
+	border-bottom-right-radius: 10px;
+	background: #af0606;
+}
+.socialIconSidebar ul li:nth-child(2) a{
+	background: #e4405f;
+}
+.socialIconSidebar ul li:nth-child(3) a{
+	background: #55acee;
+}
+.socialIconSidebar ul li:nth-child(4) a{
+	background: #dd4b39;
+}
+.socialIconSidebar ul li:nth-child(5) a{
+	background: #0077B5;
+}
+.socialIconSidebar .closeBtn a {
+	cursor: pointer;
+}
+
+/* ===========================================================
 					 Work Section
-=========================================================================== */
+=========================================================== */
 .workSection {
 	margin: 50px 0;
 }

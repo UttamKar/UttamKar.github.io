@@ -21,7 +21,7 @@
 	border-radius: 10px;
 	box-sizing: border-box;
 	width: 400px;
-	height: 350px;
+	height: 380px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -30,6 +30,8 @@
 @media only screen and (max-width: 576px) {
 	.loginForm .box {
 		width: 90%;
+		border-left: 2px solid #f8f8f8;
+		border-right: 2px solid #f8f8f8;
 	}
 }
 .loginForm .box h2 {
@@ -90,4 +92,7 @@
 .loginForm .box .inputBox input:focus ~ span,
 .loginForm .box .inputBox input:valid ~ span {
 	transform: scale(1);
+}
+.loginForm .forgetPass{
+	margin-top: 40px;
 }

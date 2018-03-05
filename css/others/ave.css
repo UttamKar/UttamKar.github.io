@@ -1,0 +1,349 @@
+
+/* =============================================
+					Upper Nav
+============================================= */
+#upperNav {
+	background-color: #333333;
+	color: #ffffff;
+	overflow: hidden;
+}
+#upperNav p{
+	margin-top: 10px;
+}
+#upperNav ul li {
+	float: left;
+	padding: 10px;
+}
+#upperNav ul li a, #upperNav p a {
+	color: #ffffff;
+}
+#cart-bg {
+	background-color: #00c8c8;
+}
+/* =============================================
+					Nav & Header
+============================================= */
+#navBar{
+	padding: 0;
+	margin:0;
+}
+.bg-one {
+	background: url(../../img/ave/background2.jpg) no-repeat center center;
+	background-size: 100%;
+	background-size: cover;
+	margin-bottom: 40px;
+	background-attachment: fixed;
+}
+#textDiv {
+	color: #ffffff;
+	margin-top: 15px;
+	margin-bottom: 100px;
+	text-transform: uppercase;
+}
+#textDiv h1{
+	font-size: 48px;
+}
+
+/* =============================================
+					Location Section
+============================================= */
+.contentSection {
+	overflow: hidden;
+}
+.contentSection .singleLocation{
+	padding: 20px;
+}
+.contentSection h4, .contentSection h6 {
+	text-transform: uppercase;
+}
+.contentSection p{
+	text-align: justify;
+	margin-bottom:30px;
+	color: #8e8c8c;
+}
+.contentSection input {
+	background-color: #ffffff;
+	border: 1px solid #737373;
+	transition: 0.2s;
+}
+.contentSection input:hover {
+	background-color: #00c8c8;
+	color: #ffffff;
+}
+
+/* =============================================
+					Map Section
+============================================= */
+.mapSection {
+	background-color: #f8f8f8;
+	margin:50px 0;
+	overflow: hidden;
+}
+
+/* =============================================
+				Magnific Popup
+============================================= */
+.magnificPopup{
+	background: url(../../img/ave/background2.jpg) no-repeat center center;
+	background-size: 100%;
+	background-size: cover;
+	padding: 50px 0;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+.magnificPopup .thumbnail{
+	overflow: hidden;
+}
+.magnificPopup .thumbnail img{
+	transition: .5s;
+}
+.magnificPopup .thumbnail img:hover{
+	transform: scale(1.2);
+}
+
+/* =============================================
+				Product Section
+============================================= */
+.productSection{
+	margin-top: 50px;
+}
+@media (min-width: 576px) and (max-width: 991px){
+	.productSection img{
+		width: 50%;
+	}
+}
+.productSection .fAwesome .fa{
+	padding: 2px;
+}
+
+.productSection .fAwesome .fa:hover{
+	transform: scale(1.2);
+	transition: 0.3s;
+	color: #000;
+}
+.productSection .button-bg a {
+	background-color: #f8f8f8;
+	margin: 0 0 10px 10px;
+}
+
+.productSection .button-bg a:hover {
+	background-color: #333333;
+	color: #ffffff;
+}
+
+/* =============================================
+				Description Section
+============================================= */
+.descriptionSection{
+	margin-bottom: 20px;
+}
+.descriptionSection p{
+	text-align: justify;
+}
+
+/* =============================================
+					Login Section
+============================================= */
+.loginSection {
+	padding:30px 0;
+	background: url(../../img/ave/background2.jpg) no-repeat center center;
+	background-size: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.loginSection .form-control{
+	background: rgba(0,0,0,0.2);
+	color: #fff;
+}
+.loginSection label, .loginSection p{
+	color: #fff;
+}
+.loginSection .loginDiv {
+	margin-bottom: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.loginSection .registerDiv {
+	border-left: 2px solid #f8f8f8;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.loginSection .loginDiv input[type="submit"]:hover,
+.loginSection .registerDiv input[type="submit"]:hover{
+	background: #00d0e0;
+}
+.loginSection .loginDiv a:hover,
+.loginSection .registerDiv a:hover{
+	color: #000;
+}
+@media screen and (max-width: 767px){
+	.loginSection .loginDiv, .loginSection .registerDiv {
+		background: rgba(0,0,0,0.2);
+		border-radius: 10px;
+		margin: 0 5px 50px 5px;
+		border-left: 2px solid #f8f8f8;
+		border-right: 2px solid #f8f8f8;
+	}
+	.loginSection .loginDiv .pull-right,
+	.loginSection .registerDiv .pull-right{
+		margin-top: 10px;
+	}
+}
+
+/* =============================================
+					Footer
+============================================= */
+.footer {
+	background-color: #f8f8f8;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.footer h5 {
+	font-family: Times New Roman;
+	text-transform: uppercase;
+	font-size: 12px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+
+.footer ul li {
+	list-style: none;
+	padding-bottom: 5px;	
+}
+
+.footer ul li a {
+	text-decoration: none;
+	color: #727272;
+}
+
+.footer ul li a:hover {
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #00c8c8;
+	padding: 5px;
+}
+@media screen and (max-width: 767px){
+	.footer .col-md-2{
+		border-bottom: 1px solid rgba(0,0,0,.2);
+	}
+	.footer hr{
+		display: none;
+	}
+	.footer .firstBlock {
+		margin-top: 20px;
+	}
+}
+.footer .firstBlock {
+	background-color: #333333;
+	color: #ffffff;
+	margin-bottom: 20px;
+	padding: 20px 0;
+}
+/* /////////////// */
+.footer .secondBlock {
+	background-color: #00c8c8;
+	height: 140px;
+}
+.footer .secondBlock .content a {
+	padding: 0;
+	height: 40px;
+	width: 40px;
+	background: #fff;
+	line-height: 40px;
+	text-align: center;
+	margin-top: 45px;
+	margin-left: 20%;
+	float: left;
+	display: inline-block;
+	transform: rotate(-30deg) skew(25deg);
+	transition: all 0.5s ease-in-out;
+	box-shadow: -10px 10px 5px rgba(0,0,0,0.5);
+}
+@media screen and (max-width: 767px){
+	.footer .secondBlock .content a {
+		margin-top: 30px;
+		margin-bottom: 20px;
+		margin-left: 40%;
+	}
+	.footer .secondBlock {
+		height: 200px;
+	}
+}
+ .footer .secondBlock .content a:before {
+	position: absolute;
+	content: '';
+	top: 5px;
+	left: -10px;
+	background: #b1b1b1;
+	height: 100%;
+	width: 10px;
+	transition: all 0.5s ease-in-out;
+	transform: skewY(-45deg);
+}
+.footer .secondBlock .content a:after {
+	position: absolute;
+	content: '';
+	bottom: -10px;
+	left: -5px;
+	background: #b1b1b1;
+	width: 100%;
+	height: 10px;
+	transition: all 0.5s ease-in-out;
+	transform: skewX(-45deg);
+} 
+.footer .secondBlock .content a:hover {
+	transform: rotate(-30deg) skew(25deg) translate(20px, -20px);
+	box-shadow: -20px 20px 20px rgba(0,0,0,0.5);
+}
+.footer .secondBlock .content a .fa{
+	font-size: 20px;
+	color: #000;
+}
+.footer .secondBlock .content a:hover .fa {
+	color: #fff;
+}
+.footer .secondBlock .content:nth-child(1) a:hover {
+	background: #3b5999;
+}
+.footer .secondBlock .content:nth-child(1) a:hover:before{
+	background: #2a4682;
+}
+.footer .secondBlock .content:nth-child(1) a:hover:after{
+	background: #5879c1;
+}
+.footer .secondBlock .content:nth-child(2) a:hover {
+	background: #55acee;
+}
+.footer .secondBlock .content:nth-child(2) a:hover:before{
+	background: #2a7cb9;
+}
+.footer .secondBlock .content:nth-child(2) a:hover:after{
+	background: #9ed0f7;
+}
+.footer .secondBlock .content:nth-child(3) a:hover {
+	background: #dd4b39;
+}
+.footer .secondBlock .content:nth-child(3) a:hover:before{
+	background: #b33121;
+}
+.footer .secondBlock .content:nth-child(3) a:hover:after{
+	background: #e26455;
+}
+.footer .secondBlock .content:nth-child(4) a:hover {
+	background: #00c300;
+}
+.footer .secondBlock .content:nth-child(4) a:hover:before{
+	background: #03a903;
+}
+.footer .secondBlock .content:nth-child(4) a:hover:after{
+	background: #45ef45;
+}
+
+
+#footerNext {
+	background-color: #333333;
+	color: #6c6c6c;
+	padding-top: 5px;
+	overflow: hidden;
+}
