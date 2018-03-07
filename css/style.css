@@ -13,8 +13,12 @@
 #preloader i {
 	color: #fff;
 	font-size: 100px;
-	margin-top: 20%;
-	margin-left: 40%;
+	/* margin-top: 20%;
+	margin-left: 40%; */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 /* ===========================================================
 						Go To Top
@@ -101,7 +105,7 @@
 .headerSection .pen{
 	width: 300px;
 	position: absolute;
-	top: 10%;
+	bottom: 10%;
 	right: 0%;
 }
 .headerSection .overlay{
@@ -393,9 +397,9 @@
 }
 }
 .workSection .single-box{
-	box-shadow: 10px 10px 15px #ccc;
+	box-shadow: 10px 10px 15px rgba(0,0,55,.5);
 	border-radius: 10px;
-	background: linear-gradient(to bottom, #fff, rgba(0,0,0,.05));
+	background: linear-gradient(45deg, rgba(0,0,0,.05), #fff);
 	padding-right: 10px;
 	padding-left: 10px;
 	transition: 0.5s;
@@ -504,17 +508,18 @@
 	border-radius: 20px;
 	box-shadow: 0 10px 20px rgba(0,0,0,.5);
 	transition: .5s;
-	max-width: 300px;
+	width: 300px;
 	margin: 30px auto;
 	position: relative;
 	overflow: hidden;
 	color: #fff;
 	border: 2px solid #fff000;
 }
-@media screen and (max-width: 576px){
+@media screen and (max-width: 992px){
 	.interfaceDesignSection .col-md-4 {
 		padding-right: 0;
 	    padding-left: 0;
+	    width: 100%;
 	}
 }
 .interfaceDesignSection .card .title .fa{
