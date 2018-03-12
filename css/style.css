@@ -138,6 +138,9 @@
 	.headerSection .contentDiv .portfolio{
 		font-size: 35px;
 	}
+	.headerSection .pen{
+		opacity: 0;
+	}
 }
 
 .cd-intro {
