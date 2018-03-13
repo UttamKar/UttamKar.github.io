@@ -1,0 +1,353 @@
+body{
+	background: url('../../img/flower/flower3.jpg') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	background-attachment: fixed;
+}
+
+/* ==================================================
+					Top Image
+================================================== */
+.topImage{
+	/* background: url('../../img/flower/flower1.jpg') no-repeat center center; */
+	background-size: cover;
+	width: 100%;
+	height: 80vh;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+}
+.topImage:before{
+	content: '';
+	position: absolute;
+	top:0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(-45deg, rgba(0,150,0,0.2), rgba(0,0,150,.2));
+}
+.topImage h1{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 60px;
+	font-weight: bold;
+	font-family: arial;
+	text-align: center;
+	transition: 2s;
+}
+@media screen and (max-width: 576px){
+	.topImage h1{
+		font-size: 30px;
+	}
+}
+
+/* ==================================================
+					Navigation Bar
+================================================== */
+.menuSection{
+	overflow: hidden;
+	width: 100%;
+	height: 100px;
+}
+.navbar{
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid transparent;
+	margin-bottom: 0;
+	z-index: 999;
+}
+.navbar-toggle{
+	margin-top: 30px;
+}
+.navbar ul li a{
+	height: 100px;
+	line-height: 70px;
+	font-size: 20px;
+}
+.navbar ul li a:hover, .navbar ul li.active a{
+	background: rgb(121,108,151) !important;
+	color: #fff !important;
+}
+@media screen and (max-width: 767px){
+	.navbar ul li a{
+		height: 40px;
+		line-height: 20px;
+		font-size: 15px;
+		background: #ccc;
+		border-bottom: 1px solid #ddd;
+	}
+}
+.nav-effect{
+	position: fixed;
+	top: 0;
+	background: rgba(255,255,255,0.7);
+	border-bottom : 2px solid red;
+	width: 100%;
+	left: 0;
+}
+.nav-placeholder{
+	background: #fff;
+}
+
+/* ==================================================
+					Text Cover
+================================================== */
+.coverText {
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+}
+.coverText p{
+	padding: 100px 50px;
+	color: #fff;
+	font-size: 20px;
+	line-height: 20px;
+	text-align: justify;
+}
+@media (max-width: 575px) {
+	.coverText p{
+		padding: 100px 10px;
+		color: #fff;
+		font-size: 18px;
+		line-height: 18px;
+		text-align: justify;
+	}
+}
+.coverText span:nth-child(2){
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	background: rgba(0,0,0,0.5);
+	transition: 0.5s;
+}
+.coverText span:nth-child(3){
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	background: rgba(0,0,0,0.5);
+	transition: 0.5s;
+}
+
+/* ==================================================
+					Pariscope
+================================================== */
+.pariscope{
+	background: linear-gradient(45deg, rgba(0,150,0,0.5), rgba(0,0,150,.5));
+}
+.pariscope1 {
+	background: url('../../img/flower/rose1.png') no-repeat center center;
+	background-attachment: fixed;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+/* ==================================================
+					Love Image
+================================================== */
+.loveImg {
+	padding: 50px 50px;
+	height: auto;
+	 background: linear-gradient(120deg, #ec5218, #6665c1); 
+	/* background: radial-gradient(circle, #ec5218, transparent); */
+	background-size: 400% 400%;
+	animation: bgPosition 30s linear infinite;	margin-bottom: 50px;
+}
+@keyframes bgPosition {
+	/* 0%{background-position: 0% 50%;}
+	50%{background-position: 100% 50%;}
+	100%{background-position: 0% 50%;} */
+	25%{background-position: 0% 100%;}
+	50%{background-position: 100% 100%;}
+	75%{background-position: 100% 0%;}
+	100%{filter: hue-rotate(360deg);}
+}
+.loveImg .firstDiv, .loveImg .secondDiv{
+	margin-bottom: 20px;
+}
+.loveImg .firstDiv img, .loveImg .secondDiv img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	box-shadow: 0 0 15px green;
+	shape-outside: circle();
+	margin: 10px;
+}
+.loveImg .firstDiv img{
+	float: left;
+}
+.loveImg .secondDiv img{
+	float: right;
+}
+@media (max-width: 575px) {
+	.loveImg .firstDiv img, .loveImg .secondDiv img{
+		width: 100px;
+		height: 100px;
+	}
+}
+.loveImg  p{
+	text-align: justify;
+	font-size: 18px;
+}
+
+/* ==================================================
+					Contract Section
+================================================== */
+.contractSection{
+	width: 100%;
+	min-height: 500px;
+	position: relative;
+	overflow: hidden;
+}
+@media (max-width: 575px) {
+	.contractSection{
+		min-height: 350px;
+	}
+}
+.contractSection:before{
+	content: '';
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	min-height: 200%;
+	background: linear-gradient(-45deg, rgba(0,150,0,.5), rgba(0,0,150,.5));
+}
+.contractSection .nainContent{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #fff;
+	padding: 0 50px;
+}
+.contractSection .nainContent h1{
+	font-size: 60px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 50px;
+}
+@media (max-width: 575px) {
+	.contractSection .nainContent{
+		padding: 0 20px;
+	}
+	.contractSection .nainContent h1{
+		font-size: 30px;
+	}
+}
+.contractSection .nainContent button{
+	width: 200px;
+	height: 50px;
+	background: transparent;
+	display: inline-block;
+	border-radius: 25px;
+	outline: none;
+	border: 2px solid #fff;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+.contractSection .nainContent button:hover{
+	background: rgba(209,100,174,1);
+}
+.contractSection .nainContent .fa{
+	position: absolute;
+	top:0;
+	left: 0;
+	height: 100%;
+	width: 30%;
+	font-size: 15px;
+	line-height: 45px;
+	border-right: 2px solid #fff;
+}
+.contractSection .nainContent p{
+	position: absolute;
+	top:0;
+	left: 30%;
+	height: 100%;
+	width: 70%;
+	line-height: 45px;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+/* ==================================================
+					Modal
+================================================== */
+.modal-content{
+	padding: 20px;
+}
+#closeBtn {
+	height: 30px;
+	width: 30px;
+	background-color: gray;
+	border: 1px solid red;
+	border-radius: 50%;
+	outline: none;
+	color: red;
+}
+.modal-header{
+	border-bottom: none;
+}
+
+
+
+/* ==================================================
+					Card Section
+================================================== */
+.cardSection {
+	padding: 50px 0;
+}
+.cardSection .card {
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	position: relative;
+	background: #254875;
+	color: #fff;
+	border-radius: 20px;
+	transition: 0.5s;
+	width: 90%;
+}
+.cardSection .card h1{
+	padding-top: 10px;
+}
+.cardSection .card-body{
+	margin-top: 10px;
+}
+.cardSection .card-body a{
+	margin-bottom: 20px;
+	padding: 5px 10px;
+	color: #fff;
+	box-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+.cardSection .card a:hover{
+	background: rgba(209,100,174,1);
+}
+
+/* ==================================================
+					Footer Section
+================================================== */
+.footerSection{
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+	background: rgba(116,108,141,1);	
+}
+.footerSection p{
+	margin-bottom: 0;
+	color: #fff;
+}
+
+
+
+
+
