@@ -12,11 +12,11 @@ jQuery(document).ready(function($){
 		var scroll = 0;
 		$(window).on('scroll', function(){
 			/*Hide header on scroll down show on scroll up*/
-			if(scroll < $(window).scrollTop()){
-				$("#navBar").css({'transform' : 'translateY(-100%)'});
+			/*if(scroll < $(window).scrollTop()){
+				$(".navbar").css({'transform' : 'translateY(-100%)'});
 			}else{
-				$("#navBar").css({'transform' : 'translateY(0)'});
-			}
+				$(".navbar").css({'transform' : 'translateY(0)'});
+			}*/
 			scroll = $(window).scrollTop();
 				
 			/*To change bg color of navbar based on scroll*/
@@ -46,11 +46,13 @@ jQuery(document).ready(function($){
 
 /*Smooth Scrolling*/
 	$('.slide-section').click(function(e){
-		e.preventDefault();
+			e.preventDefault();
 
-		var linkHref = $(this).attr('href');
+			var linkHref = $(this).attr('href');
 
-		$('body, html').animate({
-			scrollTop: $(linkHref).offset().top
-		}, 1000);
-	});
+			$('body, html').animate({
+				scrollTop: $(linkHref).offset().top - $('.navbar').outerHeight()
+			}, 1000);
+		});
+
+

@@ -105,6 +105,7 @@ $(document).ready(function(){
 
 
 	/*Card Section*/
+	if($(window).width() > 767){
 		if(scroll > $('.cardSection').offset().top - $(window).height()){
 
 			var offset = Math.min(0, scroll - $('.cardSection').offset().top + $(window).height()/4);
@@ -116,6 +117,9 @@ $(document).ready(function(){
 				'transform' : 'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.5) +'px)'
 			});
 		}
+	}
+
+
 
 	});
 		

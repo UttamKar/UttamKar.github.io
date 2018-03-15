@@ -91,12 +91,20 @@ $(document).ready(function(){
 
 
 
-
-
+/////////////////////////////////////////
+		$(window).resize(function() {
+			wowAnimation();
+		});
+		wowAnimation();
+		function wowAnimation() {
 			if($(window).width() < 992){
-				$('.searchBox, .gmap, .pen, .single-box, form.wow, form .wow, .contactDetails, .workSection .col-md-12').removeClass('slideInRight').removeClass('slideInLeft').removeClass('bounceInUp').removeClass('fadeInRight').removeClass('fadeInLeft').removeClass('fadeInUp');
+				$('.searchBox, .gmap, .pen, .single-box, form.wow, form .wow, .contactDetails, .workSection .col-md-12').removeClass('slideInRight').removeClass('slideInLeft').removeClass('bounceInUp').removeClass('fadeInRight').removeClass('fadeInLeft').removeClass('fadeInUp').removeClass('wow');
 			}
-		
+		};
+//////////////////////////////////////////
+
+
+
 
 });
 

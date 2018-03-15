@@ -1,4 +1,6 @@
-
+/* ================================================
+					Nav Section
+================================================ */
 .navbar-default{
 	background: rgb(62,48,101);
 	border: none;
@@ -18,13 +20,18 @@
     transition: .5s;
     border-bottom: 2px solid transparent;
 }
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
     color: #00e0d0;
     border-radius: 20px;
     border-color: #00e0d0;
     background: linear-gradient(45deg, purple 30%, transparent 70%);
 }
 
+
+/* ================================================
+					Header Section
+================================================ */
 .headerSection {
 	background-size: cover;
 	background-attachment: fixed;
@@ -59,22 +66,73 @@
 		top: 90%;
 	}
 }
-#textColor, #middle {
+#textColor {
 	color: #ffffff;
 }
-
 #menuContent {
 	color: #ffffff;
 	font-size: 14px;
 }
-
 hr {
 	background-color: #00e0d0;
-	width: 5% ;
-	margin: 5px auto;
+	width: 10% ;
+	height: 1px;
+	margin: 20px auto;
 }
 
-#secondPart {
+/* ================================================
+					Login Section
+================================================ */
+.loginSection{
+	overflow: hidden;
+}
+.loginSection .loginDiv{
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	padding: 0;
+	margin: 0;
+	background: #21424A;	
+}
+ .loginSection .loginDiv .login{
+	background: #2FAC6C;
+	position: relative;
+	transform: skewX(-20deg);
+}
+.loginSection .loginDiv .login:before{
+	content: '';
+	background: #2FAC6C;
+	position: absolute;
+	top:0;
+	left: -50px;
+	width: 40%;
+	height: 100%;
+}
+.loginSection .loginDiv .register{
+	transform: skewX(-20deg);
+}
+.loginSection .loginDiv .login a, .loginSection .loginDiv .register a{
+	transform: skewX(20deg);
+	font-size: 30px;
+	color:#fff;
+	text-decoration: none;
+	display: block;
+	transition: 0.3s;
+}
+.loginSection .loginDiv a:hover{
+	color: #000;
+}
+@media screen and (max-width: 576px){
+	.loginSection .loginDiv .login a,
+	.loginSection .loginDiv .register a{
+		font-size: 20px;
+	}
+}
+
+/* ================================================
+				Our Story Section
+================================================ */
+#storySection {
 	margin-top: 30px; 
 	margin-bottom: 30px; 
 	text-align: justify;
@@ -101,7 +159,6 @@ hr {
 	background: #00e0d0;
 	opacity: .2;
 	transition: .5s;
-
 }
 #customBtn:hover:before {
 	top: 40px;
@@ -110,114 +167,144 @@ hr {
 #customBtn:hover {
 	color: #00e0d0;
 }
+/* ================================================
+				 Story video Section
+================================================ */
 #storyVideo{
 	background: url('../../img/tajem_master/image10.jpg') no-repeat center top;
 	margin-bottom: 50px;
 }
+.aligncenter{
+	display: block;
+	margin: 100px auto;
+}
 
-
-#customMargin {
+/* ================================================
+				 Category Section
+================================================ */
+.experties{
+	margin-bottom: 20px;
+}
+.category #customMargin {
 	box-shadow: 1px 1px 0 #ebebeb;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-#customMargin2 {
+.category #customMargin2 {
 	box-shadow: 0 1px #ebebeb;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-#customMargin3 {
+.category #customMargin3 {
 	box-shadow: 1px 0 #ebebeb;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-#customMargin4 {
+.category #customMargin4 {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-
-#customMargin img, #customMargin2 img, #customMargin3 img, #customMargin4 img {
+.category #customMargin img,
+.category #customMargin2 img,
+.category #customMargin3 img,
+.category #customMargin4 img,
+.category #customMargin h5,
+.category #customMargin2 h5,
+.category #customMargin3 h5 {
 	margin-bottom: 20px;
 }
-#customMargin h5, #customMargin2 h5, #customMargin3 h5 {
+.category #customMargin-h5 {
 	margin-bottom: 20px;
 }
-#customMargin-h5 {
-	margin-bottom: 20px;
-}
-
-#fourthSection p {
+.category p {
 	color: #9a9a9a;
 }
-#fourthSection .expertiseItem img{
+.category .expertiseItem img{
 	transition: .5s;
 }
-#fourthSection .expertiseItem:hover img {
+.category .expertiseItem:hover img {
 	transform: scale(1.5);
 }
+@media screen and (max-width: 992px){
+	.expertiseItem{
+		border-bottom: 1px solid red;
+	}
+	#img-mrgn a img {
+		width: 50%;
+	}
+}
 
+/* ================================================
+				 Employee Section
+================================================ */
+.teamSection{
+	background-size: cover;
+	background-attachment: fixed;
+	margin-top: 50px;
+}
+.teamSection #fifthContent {
+	color: #ffffff;
+	padding-top: 40px;
+}
+.teamSection #details {
+	background-color: transparent;
+	border: 1px solid #ffffff;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.teamSection #fifthSection-P {
+	color: #ffffff;
+	margin-bottom: 20px;
+}
+.teamSection #middle {
+	margin:20px 0;
+	color: #ffffff;
+}
+.teamSection .blockImage {
+	background-color: #ffffff;
+}
+.teamSection .blockImage img{
+	width: 100%;
+}
+@media screen and (max-width: 576px){
+	.teamSection #details h5{
+	    display: none;
+	}
+}
 
+/* ================================================
+				 Work Section
+================================================ */
+.workSection, .workSection img{
+	margin-top: 80px;
+	margin-bottom: 60px;
+}
+
+/* ================================================
+				 Slider Section
+================================================ */
 .sliderSection {
 	background-size: cover;
 	background-attachment: fixed;
 	margin-bottom: 120px;
 	overflow: hidden;
 }
-
-.selection {
+.sliderSection .selection {
 	margin-top: 60px;
 }
-
-#fifthContent {
-	color: #ffffff;
-	padding-top: 40px;
-}
-
-#fifthSection-P {
-	color: #ffffff;
-	margin-bottom: 20px;
-}
-
-#middle {
-	margin:20px 0 ;
-}
-
-.blockImage {
-	background-color: #ffffff;
-}
-.blockImage img{
-	width: 100%;
-}
-
-#details {
-	background-color: transparent;
-	border: 1px solid #ffffff;
-	padding: 5px;
-	margin-bottom: 10px;
-}
-
-#imageDiv{
-	margin-top: 80px;
-	margin-bottom: 60px;
-}
-
-#quotation {
+.sliderSection #quotation {
 	display: block;
 	margin: 0 auto;
 	padding-top: 50px;
 }
-
-
-#txtCol {
+.sliderSection #txtCol {
 	color: #ffffff;
 	margin-top: 30px;
 }
-
-#eco {
+.sliderSection #eco {
 	padding-bottom: 50px;
 }
-
-#pagingImage {
+.sliderSection #pagingImage {
 	padding: 5px;
 	margin-bottom: 10px;
 }
@@ -227,6 +314,9 @@ hr {
 	}
 }
 
+/* ================================================
+				 Logo Section
+================================================ */
 .logoSection #img-mrgn img {
 	transition: 0.3s;
 	margin: 30px auto;
@@ -236,15 +326,15 @@ hr {
 	transform: scale(1.1);
 }
 
+/* ================================================
+					Footer Section
+================================================ */
 .footerSection {
 	background-size: cover;
 	background-attachment: fixed;
 	padding: 50px 0;
 	margin-top: 50px;
 }
-
-
-
 .footerSection h4 {
 	text-align: justify;
 	color: #ffffff;
@@ -261,7 +351,6 @@ hr {
 	color: #fff;
 	padding-left: 5px;
 }
-
 .footerSection .contactDiv{
 	font-size: 15px;
 }
@@ -293,8 +382,7 @@ hr {
 	font-size: 20px;
 	background: gray;
 }
-
-#fontAwesome .fa {
+.footerSection #fontAwesome .fa {
 	width: 30px;
 	height: 30px;
 	background-color: transparent;
@@ -306,65 +394,27 @@ hr {
 	margin-right: 10px;
 	transition: .5s;
 }
-
-#fontAwesome a:hover .fa{
+.footerSection #fontAwesome a:hover .fa{
 	color: #00e0d0;
 	border-color: #00e0d0;
 	transform: scale(1.2);
 }
-
-
-#footerLast {
+.footerSection #footerLast {
 	margin-top: 30px;
 }
-
-#footerLast a {
+.footerSection #footerLast a {
 	padding: 5px;
 	text-decoration: none;
 	color: #ffffff;
 }
-
-#footerLast ul li {
+.footerSection #footerLast ul li {
 	list-style: none;
 	float: left;
 }
-
-#footerLast ul li a:hover {
+.footerSection #footerLast ul li a:hover {
 	list-style: none;
 	color: #00e0d0;
 }
-
-.teamSection{
-	background-size: cover;
-	background-attachment: fixed;
-	margin-top: 50px;
-}
-@media screen and (max-width: 576px){
-	.teamSection #details h5{
-	    display: none;
-	}
-}
-.clearfix{
-	clear:both;
-}
-.aligncenter{
-	display: block;
-	margin: 100px auto;
-}
-
-
 .noMargin{
 	margin: 0 !important;
 }
-
-@media screen and (max-width: 992px){
-	.expertiseItem{
-		border-bottom: 1px solid red;
-	}
-
-	#img-mrgn a img {
-		width: 50%;
-	}
-}
-
-
