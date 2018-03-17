@@ -287,6 +287,7 @@ hr {
 	background-size: cover;
 	background-attachment: fixed;
 	margin-bottom: 120px;
+	height: 450px;
 	overflow: hidden;
 }
 .sliderSection .selection {

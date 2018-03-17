@@ -45,7 +45,9 @@ $(document).ready(function(){
 
 
 	/*Wow Js activation*/
-		new WOW().init();
+		if ($(window).width() > 676) {
+	        new WOW().init();
+	    };
 
 	/*pen delayed fadeIn*/
 		$( ".pen" ).slideUp( 300 ).delay( 800 ).fadeIn( 300 );
@@ -88,20 +90,6 @@ $(document).ready(function(){
 				$('.socialIconSidebar ul').css({'display' : 'none'});
 			},800);
 		});
-
-
-
-/////////////////////////////////////////
-		$(window).resize(function() {
-			wowAnimation();
-		});
-		wowAnimation();
-		function wowAnimation() {
-			if($(window).width() < 992){
-				$('.searchBox, .gmap, .pen, .single-box, form.wow, form .wow, .contactDetails, .workSection .col-md-12').removeClass('slideInRight').removeClass('slideInLeft').removeClass('bounceInUp').removeClass('fadeInRight').removeClass('fadeInLeft').removeClass('fadeInUp').removeClass('wow');
-			}
-		};
-//////////////////////////////////////////
 
 
 
