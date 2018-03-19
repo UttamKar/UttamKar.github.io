@@ -27,12 +27,16 @@
 .gototop{
 	text-decoration:none;
 	color:#fff;
-	padding:5px;
 	position:fixed;
 	bottom:1px;
-	right:1px;
+	right:5px;
 	z-index: 111;
-	font-size: 40px;
+	font-size: 35px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	text-align: center;
+	background: linear-gradient(45deg, rgba(0,150,0,1), rgba(0,0,150,1));
 }
 /* ===========================================================
 						Navigation Bar
@@ -99,7 +103,7 @@
 	width: 100%;
 	overflow: hidden;
 	position: relative;
-	background: #673ab7 url('../img/bg1.jpg') no-repeat center center;
+	/* background: #673ab7 url('../img/bg1.jpg') no-repeat center center; */
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -274,12 +278,62 @@
 	}
 }
 
+/* ================================================
+					Login Section
+================================================ */
+.loginSection{
+	overflow: hidden;
+}
+.loginSection .loginDiv{
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	padding: 0;
+	margin: 0;
+	background: #21424A;	
+}
+ .loginSection .loginDiv .login{
+	background: #2FAC6C;
+	position: relative;
+	transform: skewX(-20deg);
+}
+.loginSection .loginDiv .login:before{
+	content: '';
+	background: #2FAC6C;
+	position: absolute;
+	top:0;
+	left: -50px;
+	width: 40%;
+	height: 100%;
+}
+.loginSection .loginDiv .register{
+	transform: skewX(-20deg);
+}
+.loginSection .loginDiv .login a, .loginSection .loginDiv .register a{
+	transform: skewX(20deg);
+	font-size: 30px;
+	color:#fff;
+	text-decoration: none;
+	display: block;
+	transition: 0.3s;
+}
+.loginSection .loginDiv a:hover{
+	color: #000;
+}
+@media screen and (max-width: 576px){
+	.loginSection .loginDiv .login a,
+	.loginSection .loginDiv .register a{
+		font-size: 20px;
+	}
+}
+
+
 /* ===========================================================================
 					 		Search Box
 =========================================================================== */
 .searchSection {
 	padding: 30px 0;
-	background: rgba(0,0,0,.5);
+	/* background: rgba(0,0,0,.5); */
 }
 .searchSection input, .searchSection a {
 	display: inline-block;
@@ -293,14 +347,21 @@
 	}
 }
 .searchSection .searchBox input[type="text"] {
-	background: #fff;
+	background: rgba(0,0,0,0.02);
 	width: 100%;
 	height: 50px;
 	border: none;
 	outline: none;
-	padding: 0 40px;
+	padding: 0 150px 0 40px;
 	border-radius: 25px;
 	position: relative;
+	border: 1px solid #ffc107;
+	color: #000;
+}
+@media screen and (max-width: 576px) {
+	.searchSection .searchBox input[type="text"] {
+		padding: 0 60px 0 40px;
+	}
 }
  .searchSection .searchBox a {
 	background: #ffc107;
@@ -323,6 +384,162 @@
 .searchOne{
 	z-index: 10;
 }
+
+/* ===========================================================================
+					 		Education Section
+=========================================================================== */
+.education{
+	padding: 50px 0 100px;
+	background: rgba(0,0,0,0.02);
+	overflow: hidden;
+}
+.education h1{
+	margin: 0 0 100px 0;
+	color: #000;
+	font-size: 40px;
+}
+.education .single-education{
+	-webkit-box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+.education .single-education .education-details{
+	margin-left: 100px;
+	margin-right: 40px;
+	padding: 30px 0;
+}
+@media screen and (max-width: 576px) {
+	.education .single-education .education-details{
+		padding: 10px 0;
+		margin-left: 80px;
+		margin-right: 20px;
+	}
+}
+.education .single-education .education-details h3{
+	color: #000;
+	margin-bottom: 20px;
+}
+.education .single-education .education-details h6{
+	font-size: 18px;
+}
+.education .single-education .education-details p{
+	font-size: 16px;
+	text-align: justify;
+}
+.education .single-education .edu-session {
+    -webkit-box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    left: 0;
+}
+.education .single-education .edu-session span{
+    color: #1453F2;
+    left: 15px;
+    -webkit-transform: rotate(-90deg) translateX(-50%);
+    -ms-transform: rotate(-90deg) translateX(-50%);
+    transform: rotate(-90deg) translateX(-50%);
+    -webkit-transform-origin: left top 0;
+    -ms-transform-origin: left top 0;
+    transform-origin: left top 0;
+    width: 90px;
+    position: absolute;
+    top: 50%;
+}
+
+
+/* ===========================================================
+				Experience Section
+=========================================================== */
+.experience{
+	background: #673ab7 url('../img/flower/flower2.jpg') no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+.experience h1{
+	margin: 50px 0 100px;
+	color: #000;
+	font-size: 40px;
+
+}
+.experience .single-experience{
+	padding: 30px 20px;
+	box-shadow:inset 0 0 30px rgba(100,100,100,.5), 10px 10px 10px rgba(0,0,0,.5);
+	border-radius: 10px;
+	margin-bottom: 50px;
+	background: linear-gradient(45deg, #5f5cf2 0%, #ac5cf2 100%);
+}
+.experience .single-experience img{
+	width: 30%;
+}
+.experience .single-experience span{
+    float: right;
+    background:  #000;
+    color: transparent;
+    -webkit-background-clip: text;
+    line-height: 50px;
+}
+.experience .single-experience h3{
+	color: #262626;
+}
+.experience .single-experience a{
+	margin: 15px 0;
+	display: block;
+	color: #0B478F;
+	font-weight: bold;
+	font-size: 16px;
+}
+.experience .single-experience p{
+	text-align: justify;
+	font-size: 16px;
+	color: #000;
+}
+
+
+/* ===========================================================
+				What I Do?
+=========================================================== */
+.whatIDo{
+	 background: rgba(0,0,0,0.02);
+	 padding-bottom: 100px;
+	 padding-top: 100px;
+	 overflow: hidden;
+}
+.whatIDo h1{
+	margin: 50px 0 100px;
+	color: #000;
+	font-size: 40px;
+}
+.whatIDo .single-work{
+	background: #fff;
+	padding: 20px 10px;
+	border-radius: 10px;
+	margin-bottom: 50px;
+	box-shadow: 0 0 20px rgba(100,100,100,.5);
+}
+.whatIDo .single-work p{
+	font-size: 16px;
+}
+.whatIDo .single-work img{
+	height: 120px;
+	width: 120px;
+	box-shadow: 0 10px 30px rgba(100,100,100,.5);
+	border-radius: 50%;
+	transition: 0.4s;
+}
+.whatIDo .single-work:hover img{
+	box-shadow: 0 0 5px rgba(100,100,100,.5);
+}
+.whatIDo .single-work h3{
+	margin: 30px 0;
+	color: #000;
+}
+
 
 /* ===========================================================
 				Social Icon SideBar Section
@@ -376,7 +593,10 @@
 =========================================================== */
 .workSection {
 	padding: 50px 0 100px;
-	background: #ccc;
+	background: #673ab7 url('../img/flower/flower2.jpg') no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
 }
 .workSection h1 {
 	font-size: 8em;
@@ -398,12 +618,12 @@
 	}
 	.workSection h1:hover {
 		text-shadow: 0 1px 0 #ccc, 0 1px 15px rgba(0,0,0,.2), 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 #ccc, 0 15px 20px rgba(0,0,0,.5);
-}
+	}
 }
 .workSection .single-box{
 	box-shadow: 10px 10px 15px rgba(0,0,55,.5);
 	border-radius: 10px;
-	background: linear-gradient(45deg, rgba(0,0,0,.05), #fff);
+	background: linear-gradient(to right, transparent, #fff);
 	padding-right: 10px;
 	padding-left: 10px;
 	transition: 0.5s;
@@ -430,7 +650,8 @@
 .workSection .single-box .workImg img{
 	width: 100%;
 	display: block;
-	margin: 0 auto; 
+	margin: 0 auto;
+	position: relative;
 }
 .workSection .single-box .workImg:hover img{
 	opacity: 0.5;
@@ -449,9 +670,8 @@
 	font-family: 'Supermercado One', cursive;
 }
 .workSection .single-box p{
-	
 	text-align: justify;
-	color: rgb(169,157,157);
+	color: #626262;
 	font-size: 16px;
 	font-family: 'Supermercado One', cursive;
 }
@@ -620,29 +840,45 @@
 						Progress Bar
 ========================================================= */
 .progressBar {
-	background: #958743;
+	background: linear-gradient(45deg, rgba(0,150,0,0.8), rgba(0,0,150,0.5));
 	padding: 50px 0;
+	overflow: hidden;
 }
-.skillBox h1 {
-	color: #fff;
+.progressBar h1{
+	margin: 50px 0 100px;
+	color: #000;
+	font-size: 40px;
 }
-.skillBox .skills {
-	margin-bottom: 20px;
+.progressBar .firstDiv{
+	margin-bottom: 50px;
 }
-.skillBox .skills h2 {
+.progressBar .skillBox{
+	border-right: 1px solid #fff;
+	padding-right: 20px;
+}
+@media screen and (max-width: 992px){
+	.progressBar .skillBox {
+		border-right: 0;
+		padding-right: 0;
+	}
+}
+.progressBar .skillBox .skills {
+	margin-bottom: 35px;
+}
+.progressBar .skillBox .skills h2 {
 	color: #fff;
 	font-size: 16px;
 	text-transform: uppercase;
 	margin-top: 5px;
 }
-.skillBox .skills .progress {
+.progressBar .skillBox .skills .progress {
 	border-radius: 10px;
 	border: 2px solid #fff;
 	background: transparent;
 	overflow: hidden;
 	margin: 0;
 }
-.skillBox .skills .progress .percent {
+.progressBar .skillBox .skills .progress .percent {
 	text-align: right;
 	color: #fff;
 	padding-right: 10px;
@@ -655,6 +891,77 @@
 	0%{background-position: 0 0;}
 	100%{background-position: 30px 0;}
 }
+/* //////////////////////////////////////////////////////////////// */
+.progressBar .contentDiv {
+	color: #fff;
+}
+.progressBar .contentDiv .skill {
+	padding: 15px 20px;
+	background: rgba(0,0,0,0.1);
+	border: 1px solid rgba(255,255,255,0.1);
+	box-shadow: inset 0 0 25px rgba(0,0,0,0.5);
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+.progressBar .contentDiv .skill h6 {
+	margin: 0;
+	margin-bottom: 5px;
+	padding: 0;
+	float: left;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.progressBar .contentDiv .skill .percentage {
+	float: right;
+}
+.progressBar .contentDiv .skill .bar {
+	height: 6px;
+	background: rgba(0,0,0,0.2);
+}
+.progressBar .contentDiv .skill .bar .pBar {
+	position: relative;
+	height: 100%;
+	background: linear-gradient(to right, #00327b, #2b80ff);
+}
+.progressBar .contentDiv .skill .bar .pBar1 {
+	animation: skillBar1 2s linear forwards;
+}
+@keyframes skillBar1{
+	0%{width: 0%}
+	100%{width: 75%}
+}
+.progressBar .contentDiv .skill .bar .pBar2 {
+	animation: skillBar2 2s linear forwards;
+}
+@keyframes skillBar2{
+	0%{width: 0%}
+	100%{width: 60%}
+}
+.progressBar .contentDiv .skill .bar .pBar3 {
+	animation: skillBar3 2s linear forwards;
+}
+@keyframes skillBar3{
+	0%{width: 0%}
+	100%{width: 90%}
+}
+.progressBar .contentDiv .skill .bar .pBar4 {
+	animation: skillBar4 2s linear forwards;
+}
+@keyframes skillBar4{
+	0%{width: 0%}
+	100%{width: 65%}
+}
+.progressBar .contentDiv .skill .bar .pBar:before {
+	position: absolute;
+	content: '';
+	top: -5px;
+	right: 0;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 0 15px 4px rgba(41,123,247,1);
+}
 
 /* ===========================================================
 						Footer Section
@@ -665,7 +972,6 @@
 	width: 100%;
 	overflow: hidden;
 	position: relative;
-	background: #673ab7 url('../img/footer.jpg') no-repeat center center;
 	background-attachment: fixed;
 	background-size: cover;
 }

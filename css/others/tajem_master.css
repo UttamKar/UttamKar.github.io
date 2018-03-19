@@ -51,7 +51,7 @@
 	cursor: pointer;
 	position: absolute;
 	bottom: 10%;
-	left: 50%;
+	left: 48%;
 	transform: translateY(-50%, -50%);
 	animation: arrowDown 2s linear infinite;
 }
@@ -62,8 +62,7 @@
 }
 @media screen and (max-width: 576px){
 	.headerSection .downArrow{
-		animation: none;
-		top: 90%;
+		display: none;
 	}
 }
 #textColor {

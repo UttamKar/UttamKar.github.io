@@ -68,6 +68,12 @@ $(document).ready(function(){
 			}
 		}
 
+	/*Match Height*/
+		$('.single-education').matchHeight({
+			byRow: false,
+		});
+
+
 	/*Social Icon Visibility on scroll*/
 		$(window).on('scroll', function(){
 			var scroll = $(window).scrollTop();
@@ -92,6 +98,11 @@ $(document).ready(function(){
 		});
 
 
+	/*parallax effect activation*/
+		
+		if ($(window).width() > 676) {
+	        $('.parallax-window').parallax();
+	    };
 
 
 });

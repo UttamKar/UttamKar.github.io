@@ -90,7 +90,7 @@
 	top: -30px;
 	left: 0;
 	color: #03a9f4;
-	font-size: 15px;
+	font-size: 10px;
 }
 .signupForm .box .inputBox input:focus ~ span,
 .signupForm .box .inputBox textarea:focus ~ span,
