@@ -5,12 +5,34 @@ body{
 	height: 100vh;
 	background-attachment: fixed;
 }
+/* ===========================================================
+						Preloader
+=========================================================== */
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fefefe;
+	z-index: 9999;
+	height: 100%;
+	height: 100%;
+}
+#status {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: url('../../img/load2.gif') no-repeat center center;
+}
 
 /* ==================================================
 					Top Image
 ================================================== */
 .topImage{
-	/* background: url('../../img/flower/flower1.jpg') no-repeat center center; */
 	background-size: cover;
 	width: 100%;
 	height: 80vh;
@@ -55,9 +77,6 @@ body{
 	margin-bottom: 0;
 	z-index: 999;
 }
-.navbar-toggle{
-	margin-top: 30px;
-}
 .navbar ul li a{
 	height: 100px;
 	line-height: 70px;
@@ -74,6 +93,9 @@ body{
 		font-size: 15px;
 		background: #ccc;
 		border-bottom: 1px solid #ddd;
+	}
+	.navbar #logo{
+		width: 50px;
 	}
 }
 .nav-effect{
@@ -153,10 +175,10 @@ body{
 .loveImg {
 	padding: 50px 50px;
 	height: auto;
-	 background: linear-gradient(120deg, #ec5218, #6665c1); 
-	/* background: radial-gradient(circle, #ec5218, transparent); */
+	 background: linear-gradient(120deg, #ec5218, #6665c1);
 	background-size: 400% 400%;
-	animation: bgPosition 30s linear infinite;	margin-bottom: 50px;
+	animation: bgPosition 30s linear infinite;
+	margin-bottom: 50px;
 }
 @keyframes bgPosition {
 	/* 0%{background-position: 0% 50%;}
@@ -208,15 +230,6 @@ body{
 	.contractSection{
 		min-height: 350px;
 	}
-}
-.contractSection:before{
-	content: '';
-	position: absolute;
-	top:0;
-	left: 0;
-	width: 100%;
-	min-height: 200%;
-	background: linear-gradient(-45deg, rgba(0,150,0,.5), rgba(0,0,150,.5));
 }
 .contractSection .nainContent{
 	position: absolute;
@@ -309,12 +322,6 @@ body{
 	color: #fff;
 	border-radius: 20px;
 	transition: 0.5s;
-	width: 90%;
-}
-@media (max-width: 992px) {
-	.cardSection .card {
-		width: 100%;
-	}
 }
 .cardSection .card h1{
 	padding-top: 10px;

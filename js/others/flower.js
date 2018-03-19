@@ -1,4 +1,9 @@
 $(document).ready(function(){
+	/*preloader*/
+		var	overlay = document.getElementById('preloader');
+			window.addEventListener('load', function() {
+				overlay.style.display ='none';
+		});
 
 	/*Header text animation*/
     $('.topImage h1').textillate({
@@ -100,12 +105,16 @@ $(document).ready(function(){
 
 	/*pariscope Section*/
 		if(scroll > $('.pariscope1').offset().top - $(window).height()){
-			$('.pariscope1').css({'background-position' : 'center '+ (scroll - $('.pariscope1').offset().top/1.5) +'px'});
+			if($(window).width() > 992){
+				$('.pariscope1').css({'background-position' : 'center '+ (scroll - $('.pariscope1').offset().top/1.2) +'px'});
+			}else{
+				$('.pariscope1').css({'background-position' : 'center '+ (scroll - $('.pariscope1').offset().top/1.5) +'px'});
+			}
 		}
 
 
 	/*Card Section*/
-	if($(window).width() > 767){
+	if($(window).width() > 992){
 		if(scroll > $('.cardSection').offset().top - $(window).height()){
 
 			var offset = Math.min(0, scroll - $('.cardSection').offset().top + $(window).height()/4);
