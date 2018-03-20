@@ -332,8 +332,7 @@
 					 		Search Box
 =========================================================================== */
 .searchSection {
-	padding: 30px 0;
-	/* background: rgba(0,0,0,.5); */
+	padding: 70px 0;
 }
 .searchSection input, .searchSection a {
 	display: inline-block;
@@ -397,6 +396,10 @@
 	margin: 0 0 100px 0;
 	color: #000;
 	font-size: 40px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	padding: 5px 0;
+	display: -webkit-inline-box;
 }
 .education .single-education{
 	-webkit-box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.1);
@@ -465,6 +468,10 @@
 	margin: 50px 0 100px;
 	color: #000;
 	font-size: 40px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	padding: 5px 0;
+	display: -webkit-inline-box;
 
 }
 .experience .single-experience{
@@ -514,6 +521,10 @@
 	margin: 50px 0 100px;
 	color: #000;
 	font-size: 40px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	padding: 5px 0;
+	display: -webkit-inline-box;
 }
 .whatIDo .single-work{
 	background: #fff;
@@ -607,7 +618,11 @@
 	 background: url('../img/cloud.jpg');
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: animatingThree 18s linear infinite;
+	animation: animatingHeader 18s linear infinite;
+}
+@keyframes animatingHeader {
+	0%{background-position: 0 0;}
+	100%{background-position: 1171px -639px;} /* img size is 1171x639 */
 }
 .workSection h1:hover {
 	text-shadow: 0 1px 0 #ccc, 0 1px 15px rgba(0,0,0,.3), 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc, 0 10px 0 #ccc, 0 11px 0 #ccc, 0 12px 0 #ccc, 0 20px 30px rgba(0,0,0,.5);
@@ -835,6 +850,125 @@
 .option .fa-times{
 	color:red;
 }
+/* ==============================================================
+					Video Background
+============================================================== */
+.ytPlayer {
+	margin: 100px 0;
+	overflow: hidden;
+}
+.bg-video {
+	height: 400px;
+	position: relative;
+}
+.mb_YTPBar .buttonBar, .mb_YTPBar .mb_YTPProgress {
+    display: none;
+}
+.mb_YTPBar.visible, .mb_YTPBar, .mb_YTPBar:hover {
+    opacity: 0;
+}
+.bg-video:hover {
+	opacity: .75;
+}
+.ytPlayer .bg-video .allBtn{
+	position: absolute;
+	left: 50%;
+	bottom: 5px;
+	margin-left: 30px;
+	transform: translateX(-50%);
+}
+.ytPlayer .bg-video button{
+	border: 0;
+	outline: none;
+}
+
+/* ===========================================================
+						Latest Works
+=========================================================== */
+.latestWork{
+	padding: 50px 0;
+	height: auto;
+	overflow: hidden;
+	background: rgba(0,0,0,0.05);
+}
+.latestWork h1{
+	margin: 50px 0 100px;
+	color: #000;
+	font-size: 40px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	padding: 5px 0;
+	display: -webkit-inline-box;
+}
+.latestWork .profile {
+	box-sizing: border-box;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.3);
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 50px;
+}
+.latestWork .profile img{
+	width: 100%;
+	transition: 0.5s;
+	transform: translateY(0) rotateX(0deg);
+	transform-origin: bottom;
+	transition: .5s;
+}
+.latestWork .profile:hover img{
+	transform: translateY(-100%) rotateX(90deg);
+}
+.latestWork .profile .details{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(-45deg, #24aa72, #9a4eff);
+	transform-origin: top;
+	text-align: center;
+	box-sizing: border-box;
+	transform: translateY(100%) rotateX(-90deg);
+	transition: .5s;
+	padding-top: 35%;
+}
+.latestWork .profile:hover .details{
+	transform: translateY(0) rotateX(0deg);
+}
+.latestWork .profile .details p{
+	color: #fff;
+	margin-bottom: 20px;
+}
+.latestWork .profile .details a{
+	padding: 5px 15px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(255,255,255,.5);
+	color: #fff;
+}
+.latestWork .profile .details a:hover{
+	box-shadow:inset 0 0 10px rgba(0,0,0,.5), 0 0 10px rgba(255,255,255,.5);
+	color: #000;
+}
+/* ////////////////////////////////////////// */
+.latestWork .filter-button{
+	margin: 0px 10px 50px;
+}
+.latestWork .filter-button button{
+	width: 100px;
+	height: 30px;
+	outline: none;
+	border: none;
+	margin-bottom: 20px;
+	transition: 0.5s;
+	text-transform: uppercase;
+}
+.activeBtn,
+.latestWork .filter-button button:focus,
+.latestWork .filter-button button:hover{
+	background: linear-gradient(-45deg, rgba(0,150,0,1), rgba(0,0,150,1));
+	color: #fff;
+}
+
 
 /* =========================================================
 						Progress Bar
@@ -848,6 +982,10 @@
 	margin: 50px 0 100px;
 	color: #000;
 	font-size: 40px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	padding: 5px 0;
+	display: -webkit-inline-box;
 }
 .progressBar .firstDiv{
 	margin-bottom: 50px;
@@ -931,21 +1069,21 @@
 	100%{width: 75%}
 }
 .progressBar .contentDiv .skill .bar .pBar2 {
-	animation: skillBar2 2s linear forwards;
+	animation: skillBar2 2.5s linear forwards;
 }
 @keyframes skillBar2{
 	0%{width: 0%}
 	100%{width: 60%}
 }
 .progressBar .contentDiv .skill .bar .pBar3 {
-	animation: skillBar3 2s linear forwards;
+	animation: skillBar3 3s linear forwards;
 }
 @keyframes skillBar3{
 	0%{width: 0%}
 	100%{width: 90%}
 }
 .progressBar .contentDiv .skill .bar .pBar4 {
-	animation: skillBar4 2s linear forwards;
+	animation: skillBar4 3.5s linear forwards;
 }
 @keyframes skillBar4{
 	0%{width: 0%}
@@ -961,6 +1099,170 @@
 	border-radius: 50%;
 	background: #fff;
 	box-shadow: 0 0 15px 4px rgba(41,123,247,1);
+}
+/* ===========================================================
+					Happy Client Section
+=========================================================== */
+.happtClient{
+	background: url('../img/bg2.jpg') no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 70vh;
+	overflow: hidden;
+	position: relative;
+}
+.happtClient:before{
+	content: '';
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+}
+.happtClient .feature-center{
+	width: 100%;
+	height: 300px;
+	background: rgba(255,255,255,.8);
+	display: block;
+	margin: 20% auto;
+	padding: 40px 10px 30px;
+}
+.happtClient .feature-center .fa{
+	font-size: 50px;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	background: #D0C185;
+	border-radius: 50%;
+	color: #fff;
+	margin-bottom: 50px;
+}
+.happtClient .feature-center .timer{
+	color: #000;
+	font-size: 45px;
+}
+.happtClient .feature-center h3{
+	color: #626262;
+	margin-top: 30px;
+}
+/* ===========================================================
+						My Team
+=========================================================== */
+.myTeam{
+	padding: 50px 0;
+	height: auto;
+	background: #fff;
+	overflow: hidden;
+}
+.myTeam h1{
+	margin: 50px 0 100px;
+	color: #000;
+	font-size: 40px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	padding: 5px 0;
+	display: -webkit-inline-box;
+}
+.myTeam .profile {
+	box-sizing: border-box;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.3);
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 20px;
+}
+.myTeam .profile img{
+	width: 100%;
+	transition: 0.5s;
+}
+.myTeam .profile:hover img{
+	transform: scale(1.1);
+}
+.myTeam .profile .view{
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%) scale(0);
+	padding: 5px 10px;
+	background: #fff;
+	border-radius: 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 12px;
+	font-family: arial;
+	margin: 0;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.myTeam .profile:hover .view{
+	transform: translateX(-50%) scale(1);
+}
+.myTeam .profile .details{
+	height: 200px;
+	width: 100%;
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	bottom: 40px;
+	text-align: center;
+	padding: 20px 10px;
+	box-shadow: border-box;
+	transition: 0.5s;
+	transform: perspective(500px) scale(0);
+	transform-origin: bottom;
+}
+.myTeam .profile .details.active{
+	transform: perspective(500px) scale(1);
+	bottom: 0px;
+}
+.myTeam .profile .details h2{
+	margin: 0;
+	padding: 0;
+	color: #607d4b;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+}
+.myTeam .profile .details span{
+	font-size: 14px;
+	color: #ccc;
+}
+.myTeam .profile .details p{
+	color: #aaa;
+	margin: 0;
+	padding: 10px 0 0;
+}
+.myTeam .profile .details h3{
+	background: #00bcd4;
+	font-size: 20px;
+	color: #fff;
+	padding: 5px 50px;
+	border-radius: 25px;
+	display: -webkit-inline-box;
+}
+.myTeam .profile .details ul{
+	display: flex;
+}
+.myTeam .profile .details ul li{
+	width: 33.3%;
+	font-size: 20px;
+}
+.myTeam .profile .details ul li:nth-child(1) .fa{
+	color: #3b5998;
+}
+.myTeam .profile .details ul li:nth-child(2) .fa{
+	color: #00aced;
+}
+.myTeam .profile .details ul li:nth-child(3) .fa{
+	color: #dd4b39;
+}
+.myTeam .profile .details .close{
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	color: #f00;
+	cursor: pointer;
 }
 
 /* ===========================================================

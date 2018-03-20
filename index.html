@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/animated-headline.css">
     <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/jquery.mb.YTPlayer.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
@@ -197,7 +198,7 @@
         <section class="experience">
             <div class="container">
                 <div class="row text-center">
-                    <h1 class="wow zoomIn">WORK EXPERIENCE</h1>
+                    <h1 class="wow zoomIn">WORKING EXPERIENCE</h1>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
@@ -242,12 +243,6 @@
     <!-- Experience Section End -->
 
 
-
-
-
-
-
-
     <!-- What I do? Start -->
         <section class="whatIDo">
             <div class="container">
@@ -255,42 +250,42 @@
                     <h1 class="wow zoomIn">What I Do?</h1>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-sm-4 text-center">
+                    <div class="col-md-4 col-sm-6 text-center">
                         <div class="single-work wow fadeInLeft">
                             <img src="img/1.png" alt="">
                             <h3>PSD to HTML</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis doloribus et magnam. Inventore recusandae ipsam, obcaecati laudantium iste asperiores blanditiis incidunt dicta repudiandae at consequatur possimus illum temporibus hic corporis ipsum sed, eveniet quos quod eligendi necessitatibus quaerat, vero totam.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 text-center">
+                    <div class="col-md-4 col-sm-6 text-center">
                         <div class="single-work wow slideInUp">
                             <img src="img/6.png" alt="">
                             <h3>PSD to Wordpress</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis doloribus et magnam. Inventore recusandae ipsam, obcaecati laudantium iste asperiores blanditiis incidunt dicta repudiandae at consequatur possimus illum temporibus hic corporis ipsum sed, eveniet quos quod eligendi necessitatibus quaerat, vero totam.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 text-center">
+                    <div class="col-md-4 col-sm-6 text-center">
                         <div class="single-work wow fadeInRight">
                             <img src="img/2.png" alt="">
                             <h3>Software Design</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis doloribus et magnam. Inventore recusandae ipsam, obcaecati laudantium iste asperiores blanditiis incidunt dicta repudiandae at consequatur possimus illum temporibus hic corporis ipsum sed, eveniet quos quod eligendi necessitatibus quaerat, vero totam.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 text-center">
+                    <div class="col-md-4 col-sm-6 text-center">
                         <div class="single-work wow fadeInRight">
                             <img src="img/3.png" alt="">
                             <h3>Web Design</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis doloribus et magnam. Inventore recusandae ipsam, obcaecati laudantium iste asperiores blanditiis incidunt dicta repudiandae at consequatur possimus illum temporibus hic corporis ipsum sed, eveniet quos quod eligendi necessitatibus quaerat, vero totam.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 text-center">
+                    <div class="col-md-4 col-sm-6 text-center">
                         <div class="single-work wow slideInDown">
                             <img src="img/4.png" alt="">
                             <h3>Web Development</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis doloribus et magnam. Inventore recusandae ipsam, obcaecati laudantium iste asperiores blanditiis incidunt dicta repudiandae at consequatur possimus illum temporibus hic corporis ipsum sed, eveniet quos quod eligendi necessitatibus quaerat, vero totam.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 text-center">
+                    <div class="col-md-4 col-sm-6 text-center">
                         <div class="single-work wow fadeInLeft">
                             <img src="img/5.png" alt="">
                             <h3>Graphic Design</h3>
@@ -382,7 +377,7 @@
     <!-- Works Section End -->
 
 
-	<!--  Price Table User Interface Design Start -->
+	<!-- Price Table User Interface Design Start -->
         <!--  <section class="interfaceDesignSection">
             <div class="container-fluid">
             	<div class="row text-center">
@@ -452,14 +447,125 @@
                 </div>
             </div>
         </section -->
-    <!--  Price Table User Interface Design End -->
+    <!-- Price Table User Interface Design End -->
+
+    
+    <!-- Video Background Start -->
+        <section class="ytPlayer">
+            <div class="">
+                <div class="bg-video">
+                    <div id="bgndVideo" class="player" data-property="{videoURL:'http://youtu.be/BsekcY04xvQ',containment:'.bg-video',autoPlay:false, mute:true, startAt:0, opacity:1}">My video</div>
+                    
+                    <div class="allBtn">
+                        <button onclick="jQuery('#bgndVideo').YTPPlay()" class="btn btn-primary">play</button>
+                        <button onclick="jQuery('#bgndVideo').YTPPause()" class="btn btn-success">pause</button>
+                        <button onclick="jQuery('#bgndVideo').YTPStop()" class="btn btn-danger">stop</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Video Background End -->
+
+
+    <!-- Latest Works Start -->
+        <section class="latestWork">
+            <div class="container">
+                <div class="row text-center">
+                    <h1 class="wow zoomIn">LATEST WORKS</h1>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-12 filter-button">
+                        <button class="activeBtn" data-filter="">All</button>
+                        <button data-filter=".html">HTML</button>
+                        <button data-filter=".jquery">jQuery</button>
+                        <button data-filter=".wordpress">Wordpress</button>
+                        <button data-filter=".css">CSS</button>
+                    </div>
+                </div>
+                <div class="row work-list">
+                    <div class="col-md-3 col-sm-6 single-latest-work css jquery">
+                        <div class="profile wow fadeInUp">
+                            <img src="img/w1.jpg" alt="">
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="tajem_master.html" target="_blank">MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 single-latest-work html">
+                        <div class="profile wow fadeInUp">
+                            <img src="img/w2.jpg" alt="">
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="ave.html" target="_blank">MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 single-latest-work css">
+                        <div class="profile wow fadeInUp">
+                            <img src="img/w3.jpg" alt="">
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="" target="_blank">MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 single-latest-work html css">
+                        <div class="profile wow fadeInUp">
+                            <img src="img/w4.jpg" alt="">
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="" target="_blank">MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 single-latest-work jquery wordpress">
+                        <div class="profile wow fadeInDown">
+                            <img src="img/w5.jpg" alt="">
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="flower.html" target="_blank">MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 single-latest-work html wordpress">
+                        <div class="profile wow fadeInDown">
+                            <img src="img/w6.jpg" alt="">
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="" target="_blank">MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 single-latest-work css html">
+                        <div class="profile wow fadeInDown">
+                            <img src="img/w7.jpg" alt="">
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="" target="_blank">MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 single-latest-work wordpress jquery">
+                        <div class="profile wow fadeInDown">
+                            <img src="img/w8.jpg" alt="">
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="" target="_blank">MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Latest Works End -->
 
 
     <!-- ProgressBar Start -->
         <section class="progressBar">
             <div class="container">
                 <div class="row text-center">
-                    <h1 class="wow zoomIn">MY SKILLS</h1>
+                    <h1 class="wow zoomIn">TECHNICAL SKILLS</h1>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6 firstDiv">
@@ -540,6 +646,127 @@
     <!-- ProgressBar End -->
 
 
+    <!-- Happy Client Section Start -->
+        <section class="happtClient">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="feature-center text-center">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i>
+                            <div class="timer" data-from="0" data-to="2200">1</div>
+                            <h3>Projects Completed</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="feature-center text-center">
+                            <i class="fa fa-smile-o" aria-hidden="true"></i>
+                            <div class="timer" data-from="0" data-to="1900">1</div>
+                            <h3>Happy Client</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="feature-center text-center">
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                            <div class="timer" data-from="0" data-to="2100">1</div>
+                            <h3>Positive Feedback</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="feature-center text-center">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <div class="timer" data-from="0" data-to="5500">1</div>
+                            <h3>Hours Spent</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Happy Client Section End -->
+
+
+
+
+    <!-- My Team Start -->
+        <section class="myTeam">
+            <div class="container">
+                <div class="row text-center">
+                    <h1 class="wow zoomIn">MY TEAM</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="profile wow fadeInLeft">
+                            <img src="img/p1.jpg" alt="">
+                            <a class="view">View Profile</a>
+                            <div class="details">
+                                <h2>Someone Famous<br /><span>Web Designer</span></h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <h3>Follow</h3>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" area-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" area-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus" area-hidden="true"></i></a></li>
+                                </ul>
+                                <div class="close"><i class="fa fa-times-circle" area-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="profile wow fadeInRight">
+                            <img src="img/p2.jpg" alt="">
+                            <a class="view">View Profile</a>
+                            <div class="details">
+                                <h2>Someone Famous<br /><span>Web Designer</span></h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <h3>Follow</h3>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" area-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" area-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus" area-hidden="true"></i></a></li>
+                                </ul>
+                                <div class="close"><i class="fa fa-times-circle" area-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="profile wow fadeInLeft">
+                            <img src="img/p3.jpg" alt="">
+                            <a class="view">View Profile</a>
+                            <div class="details">
+                                <h2>Someone Famous<br /><span>Web Designer</span></h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <h3>Follow</h3>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" area-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" area-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus" area-hidden="true"></i></a></li>
+                                </ul>
+                                <div class="close"><i class="fa fa-times-circle" area-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="profile wow fadeInRight">
+                            <img src="img/p4.jpg" alt="">
+                            <a class="view">View Profile</a>
+                            <div class="details">
+                                <h2>Someone Famous<br /><span>Web Designer</span></h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <h3>Follow</h3>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook" area-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" area-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus" area-hidden="true"></i></a></li>
+                                </ul>
+                                <div class="close"><i class="fa fa-times-circle" area-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- My Team End -->
+
+
 	<!-- Footer Section Start -->
 		<section class="footerSection parallax-window" data-parallax="scroll" data-image-src="img/footer.jpg">
 			<div class="container">
@@ -597,6 +824,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/modernizr-2.8.3.min.js"></script>
     <script src="js/animated-headline.js"></script>
+    <script src="js/jquery.countTo.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>

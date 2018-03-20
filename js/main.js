@@ -105,6 +105,54 @@ $(document).ready(function(){
 	    };
 
 
+
+
+
+	/*Our Team Section*/
+
+		$('.view').on('click', function(){
+			$(this).parents(".profile").children('.details').addClass('active');
+			/*$(this).find('~.details').addClass('active');*/
+			$(this).css({'display' : 'none'});
+		});
+		$('.close').on('click', function(){
+			$(this).parent().removeClass('active');
+			$(this).parents(".profile").children(".view").css({'display' : 'block'});
+		});
+
+
+	////////////////////////////////////////////////////
+	/*Isotope Activation*/
+		var $grid = $('.work-list').isotope({
+			itemSelector: '.single-latest-work',
+			mesonry: {
+		  		columnWidth: '.single-latest-work'
+			}
+		});
+	/*filter items on button click*/
+		$('.filter-button').on( 'click', 'button', function() {
+		    var filterValue = $(this).attr('data-filter');
+		    $grid.isotope({ filter: filterValue });
+		});
+	/*button selection*/
+		$('.filter-button button').click(function(){
+			$('.filter-button button').removeClass('activeBtn');
+			$(this).addClass('activeBtn');
+		});
+	///////////////////////////////////////////////////////////////////
+
+
+	/*Count-To Activation*/
+		$('.timer').countTo({
+		    speed: 4000,
+		    refreshInterval: 50
+		});
+
+	/*YTPlayer Activation*/
+		jQuery("#bgndVideo").YTPlayer({
+			showYTLogo: false,
+		});
+
 });
 
 
