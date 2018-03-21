@@ -121,7 +121,6 @@
 	width: 100%;
 	background: linear-gradient(-45deg, rgba(0,150,0,0.5), rgba(0,0,150,.5));
 }
-
 .headerSection .contentDiv {
 	position: absolute;
 	top: 50%;
@@ -513,8 +512,7 @@
 =========================================================== */
 .whatIDo{
 	 background: rgba(0,0,0,0.02);
-	 padding-bottom: 100px;
-	 padding-top: 100px;
+	 padding: 50px 0 100px;
 	 overflow: hidden;
 }
 .whatIDo h1{
@@ -876,10 +874,14 @@
 	bottom: 5px;
 	margin-left: 30px;
 	transform: translateX(-50%);
+	display: none;
 }
 .ytPlayer .bg-video button{
 	border: 0;
 	outline: none;
+}
+.ytPlayer .bg-video:hover .allBtn{
+	display: block;
 }
 
 /* ===========================================================
@@ -1104,7 +1106,7 @@
 					Happy Client Section
 =========================================================== */
 .happtClient{
-	background: url('../img/bg2.jpg') no-repeat center center;
+	background: url('../img/bg4.jpg') no-repeat center center;
 	background-size: cover;
 	background-attachment: fixed;
 	min-height: 70vh;
@@ -1145,6 +1147,121 @@
 .happtClient .feature-center h3{
 	color: #626262;
 	margin-top: 30px;
+}
+
+
+/* ==============================================================
+						Client Feedback
+============================================================== */
+.clientFeedback {
+	padding: 50px 0;
+	position: relative;
+	background: rgba(0,0,0,0.1);
+	overflow: hidden;
+}
+.clientFeedback h1{
+	margin: 50px 0 100px;
+	color: #000;
+	font-size: 40px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	padding: 5px 0;
+	display: -webkit-inline-box;
+}
+.clientFeedback .owl-prev, .clientFeedback .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: auto;
+    border: 1px solid rgba(0,150,0,1);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: rgba(0,0,150,1);
+    opacity: 0;
+}
+.clientFeedback .owl-next {
+    right: 0;
+}
+.owl-carousel:hover .owl-prev, .owl-carousel:hover .owl-next{
+	opacity: 1;
+}
+.clientFeedback .singleDiv{
+	padding: 50px;
+}
+.clientFeedback .singleDiv h3{
+	color: #626262;
+	margin: 50px 0 20px;
+	font-family: 'Lobster', cursive;
+}
+.clientFeedback .singleDiv p{
+	font-size: 40px;
+	line-height: 40px;
+	font-family: 'Rouge Script', cursive;
+}
+.clientFeedback .singleDiv figure{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.clientFeedback .singleDiv figure img{
+	transition: all .5s ease-in-out;
+	border-radius: 50%;
+	display: block;
+}
+.clientFeedback .singleDiv:hover figure img{
+	transform: scale(1.1);
+}
+/* ===========================================================
+						Newsletter Section
+=========================================================== */
+.newsLetter{
+	background: url('../img/bg3.jpg') no-repeat center center;
+	background-attachment: fixed;
+	background-size: cover;
+	min-height: 450px;
+	overflow: hidden;
+	position: relative;
+	padding: 50px 0;
+}
+.newsLetter:before{
+	content: '';
+	position: absolute;
+	top:0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(-45deg, rgba(0,150,0,0.5), rgba(0,0,150,.5));
+}
+.newsLetter h1{
+	margin: 50px 0;
+	color: #fff;
+	font-size: 40px;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	padding: 5px 0;
+	display: -webkit-inline-box;
+}
+.newsLetter p{
+	color: #fff;
+	font-size: 18px;
+	margin-bottom: 100px;
+}
+.newsLetter input{
+	height: 50px;
+	margin-bottom: 20px;
+	color: #000;
+}
+.newsLetter input[type="submit"]{
+	background: #D1C286;
+	font-size: 18px;
+}
+.newsLetter input[type="submit"]:hover{
+	background: #f1C286;
+	color: #fff;
 }
 /* ===========================================================
 						My Team

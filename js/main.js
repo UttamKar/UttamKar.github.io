@@ -1,158 +1,130 @@
 $(document).ready(function(){
-	/*preloader*/
-		var	overlay = document.getElementById('preloader');
-			window.addEventListener('load', function() {
-				overlay.style.display ='none';
-		});
+	
+	/*Header text animation*/
+	    $('.topImage h1').textillate({
+	    	loop: true,
+	    	minDisplayTime: 3000,
+	    	initialDelay: 500,
+	    	autoStart: true,
+	    	in: {
+			  	// set the effect name
+			    /*effect: 'rollIn',*/
 
-	/*Go To Top*/
-		$(window).scroll(function(){
-			if($(this).scrollTop()>300){
-				$('.gototop').fadeIn();
+			    // set the delay factor applied to each consecutive character
+			    delayScale: 1.5,
+
+			    // set the delay between each character
+			    delay: 50,
+
+			    shuffle: false,
+
+			    // reverse the character sequence
+			    // (note that reverse doesn't make sense with sync = true)
+			    reverse: false,
+
+			    // callback that executes once the animation has finished
+			    callback: function () {
+			    	$('.topImage h1').css({
+			    		'-webkit-text-stroke-width' : '2px',
+			    		'-webkit-text-fill-color' : 'rgba(111,222,150,0.5)',
+			    		'color' : 'yellow'
+			    	});
+			    }
+			},
+			out: {
+			    /*effect: 'hinge',*/
+			    delayScale: 1.5,
+			    delay: 50,
+			    sync: false,
+			    shuffle: false,
+			    reverse: false,
+			    callback: function () {$('.topImage h1').css({
+			    	'-webkit-text-stroke-width' : '0',
+			    	'-webkit-text-fill-color' : 'white',
+			    	'color' : 'white'
+				    });
 				}
-			else{
-				$('.gototop').fadeOut();
-			}
-		});
-		$('.gototop').click(function(){
-			$('html, body').animate({scrollTop:0}, 500);
-		});
+			},
+	    });
+
+
+
+    /*parallax effect activation*/
+		$('.parallax-window').parallax();
+
+
+	/*Top Image section flower fall (sakura) activation*/
+	    $('body').sakura('start', {
+	        className: 'sakura', // Class name to use
+	        fallSpeed: 1,        // Factor for petal fall speed
+	        maxSize: 30,         // Maximum petal size
+	        minSize: 10,          // Minimum petal size
+	        newOn: 300
+	    });
+
 
 	/*Navigation Bar*/
-		var scroll = 0;
 		$(window).on('scroll', function(){
-			/*Hide header on scroll down show on scroll up*/
-			if(scroll < $(window).scrollTop()){
-				$("#navBar").addClass('hide-menu');
+			var scroll = $(window).scrollTop();
+			var headerHeight = $('.topImage').outerHeight();
+			/*var navOffset = $('.navbar').offset().top;*/
+
+			$('.navbar').wrap('<div class="nav-placeholder"></div>');
+			$('.nav-placeholder').height($('.navbar').outerHeight());
+
+			if(scroll>headerHeight){
+				$('.navbar').addClass('nav-effect');
+				/*$('.navbar').addClass('navbar-fixed-top');*/
 			}else{
-				$("#navBar").removeClass('hide-menu');
+				$('.navbar').removeClass('nav-effect');
+				/*$('.navbar').removeClass('navbar-fixed-top');*/
 			}
-			scroll = $(window).scrollTop();
-				
-			/*To change bg color of navbar based on scroll*/
-			var colorValueIncrement = Math.round(scroll/20) ;
-			var bodyColor = $('.navbar-default').css('background');
-			var lastComma = bodyColor.lastIndexOf(',');
-			var newColor = bodyColor.slice(0, lastComma + 1) + Math.round(colorValueIncrement) + ')';
-			$('.navbar-default').css({'background': newColor});
-
-		});
-	/*Navbar button toggle*/
-		$('#navBar button').click(function(){
-			$(this).toggleClass('active');
-		});
 
 
+	/*Text Cover Section*/
+		if(scroll > $('.coverText').offset().top - $(window).height()){
+			$('.coverText span:nth-child(2)').css({
+				'top' : -scroll/2 + 'px'
+			});
+			$('.coverText span:nth-child(3)').css({
+				'bottom' : -scroll/2 + 'px'
+			});
+		}else{
+			$('.coverText span:nth-child(2)').css({
+				'top' : 0
+			});
+			$('.coverText span:nth-child(3)').css({
+				'bottom' : 0
+			});
+		}
 
-	/*Wow Js activation*/
-		if ($(window).width() > 676) {
-	        new WOW().init();
-	    };
-
-	/*pen delayed fadeIn*/
-		$( ".pen" ).slideUp( 300 ).delay( 800 ).fadeIn( 300 );
-
-	/*Search Box*/
-		searchBox();
-		$(window).resize(function() {
-			searchBox();
-		});
-
-		function searchBox() {
-			if($(window).width()<576){
-				$('.searchOne').css({'z-index': '-1'});
-				$('.searchTwo').css({'z-index': '11'});
+	/*pariscope Section*/
+		if(scroll > $('.pariscope1').offset().top - $(window).height()){
+			if($(window).width() > 992){
+				$('.pariscope1').css({'background-position' : 'center '+ (scroll - $('.pariscope1').offset().top/1.2) +'px'});
 			}else{
-				$('.searchTwo').css({'z-index': '9'});
-				$('.searchOne').css({'z-index': '10'});
+				$('.pariscope1').css({'background-position' : 'center '+ (scroll - $('.pariscope1').offset().top/1.5) +'px'});
 			}
 		}
 
-	/*Match Height*/
-		$('.single-education').matchHeight({
-			byRow: false,
-		});
+
+	/*Card Section*/
+	if($(window).width() > 992){
+		if(scroll > $('.cardSection').offset().top - $(window).height()){
+
+			var offset = Math.min(0, scroll - $('.cardSection').offset().top + $(window).height()/4);
+
+			$('.card-1').css({
+				'transform' : 'translate('+ offset +'px, '+ Math.abs(offset * 0.5) +'px)'
+			});
+			$('.card-3').css({
+				'transform' : 'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.5) +'px)'
+			});
+		}
+	}
 
 
-	/*Social Icon Visibility on scroll*/
-		$(window).on('scroll', function(){
-			var scroll = $(window).scrollTop();
-			if(scroll > $('.socialIconSidebar').offset().top - ($(window).height()/2)){
-				$('.socialIconSidebar ul').css({'transform' : 'translate(0%, -50%)'});
-			}else{
-				$('.socialIconSidebar ul').css({'transform' : 'translate(-100%, -50%)'});
-			}
-		});
-		$('.closeBtn').click(function(){
-			$('.socialIconSidebar ul li a').css({'transform' : 'translate(-100%, -50%) rotate(360deg)'});
-			$('.socialIconSidebar ul li:nth-child(1) a').css({'transition-delay' : '.1s'});
-			$('.socialIconSidebar ul li:nth-child(2) a').css({'transition-delay' : '.2s'});
-			$('.socialIconSidebar ul li:nth-child(3) a').css({'transition-delay' : '.3s'});
-			$('.socialIconSidebar ul li:nth-child(4) a').css({'transition-delay' : '.4s'});
-			$('.socialIconSidebar ul li:nth-child(5) a').css({'transition-delay' : '.5s'});
-			$('.socialIconSidebar ul li:nth-child(6) a').css({'transition-delay' : '.6s'});
-			
-			setTimeout(function(){
-				$('.socialIconSidebar ul').css({'display' : 'none'});
-			},800);
-		});
 
-
-	/*parallax effect activation*/
+	});
 		
-		if ($(window).width() > 676) {
-	        $('.parallax-window').parallax();
-	    };
-
-
-
-
-
-	/*Our Team Section*/
-
-		$('.view').on('click', function(){
-			$(this).parents(".profile").children('.details').addClass('active');
-			/*$(this).find('~.details').addClass('active');*/
-			$(this).css({'display' : 'none'});
-		});
-		$('.close').on('click', function(){
-			$(this).parent().removeClass('active');
-			$(this).parents(".profile").children(".view").css({'display' : 'block'});
-		});
-
-
-	////////////////////////////////////////////////////
-	/*Isotope Activation*/
-		var $grid = $('.work-list').isotope({
-			itemSelector: '.single-latest-work',
-			mesonry: {
-		  		columnWidth: '.single-latest-work'
-			}
-		});
-	/*filter items on button click*/
-		$('.filter-button').on( 'click', 'button', function() {
-		    var filterValue = $(this).attr('data-filter');
-		    $grid.isotope({ filter: filterValue });
-		});
-	/*button selection*/
-		$('.filter-button button').click(function(){
-			$('.filter-button button').removeClass('activeBtn');
-			$(this).addClass('activeBtn');
-		});
-	///////////////////////////////////////////////////////////////////
-
-
-	/*Count-To Activation*/
-		$('.timer').countTo({
-		    speed: 4000,
-		    refreshInterval: 50
-		});
-
-	/*YTPlayer Activation*/
-		jQuery("#bgndVideo").YTPlayer({
-			showYTLogo: false,
-		});
-
 });
-
-
