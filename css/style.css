@@ -392,7 +392,7 @@
 	overflow: hidden;
 }
 .education h1{
-	margin: 0 0 100px 0;
+	margin: 50px 0 100px;
 	color: #000;
 	font-size: 40px;
 	border-top: 2px solid #000;
@@ -462,6 +462,7 @@
 	background-size: cover;
 	background-attachment: fixed;
 	overflow: hidden;
+	padding: 50px 0 100px;
 }
 .experience h1{
 	margin: 50px 0 100px;

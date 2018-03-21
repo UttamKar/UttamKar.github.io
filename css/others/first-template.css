@@ -1,0 +1,112 @@
+/* ------------------------------------------------------------------------------
+   Preloader styles
+-------------------------------------------------------------------------------*/
+
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fefefe;
+	z-index: 9999;
+	height: 100%;
+	height: 100%;
+}
+#status {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: url('../../img/first-template/load.gif') no-repeat center center;
+}
+
+
+/* ------------------------------------------------------------------------------
+   Top Section
+-------------------------------------------------------------------------------*/
+.topSection {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+}
+.topSection:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,100,0.5);
+}
+.topSection .jet{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: rotate(8deg);
+}
+.topSection .rotate{
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+	color: #e012d5;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+}
+@media screen and (max-width: 576px){
+	.topSection .rotate{
+		font-size: 30px;
+	}
+}
+/* //////////////////////////// */
+.topSection ul.countdown {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.topSection .countdown p {
+	color: #fff;
+}
+.topSection ul.countdown li {
+	display: inline-block;
+	color: #000;
+	width: 110px;
+	height: 60px;
+	line-height: 60px;
+	background: #fff;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+@media screen and (max-width: 576px){
+	
+}
+.topSection ul.countdown li span {
+	font-size: 20px;
+	font-weight:600;
+}
+.topSection ul.countdown li.seperator {
+	font-size: 30px;
+	vertical-align: top;
+	padding: 0 8px;
+}
+.topSection ul.countdown li p {
+	font-size: 13px;
+	margin-bottom: 0;
+	letter-spacing:3px;
+}
+
+
+
+
+.aaa{
+	height: 100vh;
+}
