@@ -1,0 +1,101 @@
+
+ .signupForm {
+	background: url('../../img/loginBg.jpg') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+.signupForm:before {
+	content: '';
+	position: absolute;top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(-45deg, rgba(0,150,0,0.5), rgba(0,0,150,.5));
+}
+.signupForm .box {
+	padding: 30px;
+	background: rgba(0,0,0,.5);
+	border-radius: 10px;
+	box-sizing: border-box;
+	width: 400px;
+	height: 470px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 576px) {
+	.signupForm .box {
+		width: 90%;
+		border-left: 2px solid #f8f8f8;
+		border-right: 2px solid #f8f8f8;
+	}
+}
+.signupForm .box h2 {
+	margin: 0;
+	margin: 0 0 20px 0;
+	color: #fff;
+}
+.signupForm .inputBox .form-control{
+	background: transparent;
+	border: none;
+	border-bottom:2px solid #fff;
+	border-radius: 0;
+	box-shadow: none;
+	width:100%;
+	color: #fff;
+	font-size: 15px;
+	margin-bottom: 35px;
+	width: 100%;
+	letter-spacing: 1px;
+}
+.signupForm .box input[type="submit"] {
+	outline: none;
+	border: none;
+	margin-top: 20px;
+	color: #000;
+	font-weight: bold;
+}
+.signupForm .box .inputBox {
+	position: relative;
+}
+.signupForm .box .inputBox label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff;
+	font-size: 15px;
+	line-height: 15px;
+	pointer-events: none;
+	transition: 0.5s;
+	padding: 10px 0;
+}
+.signupForm .box .inputBox span {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #03a9f4;
+	transform: scale(0);
+	transition: 0.5s;
+}
+.signupForm .box .inputBox input:focus ~ label,
+.signupForm .box .inputBox textarea:focus ~ label,
+.signupForm .box .inputBox input:valid ~ label,
+.signupForm .box .inputBox textarea:valid ~ label {
+	top: -30px;
+	left: 0;
+	color: #03a9f4;
+	font-size: 10px;
+}
+.signupForm .box .inputBox input:focus ~ span,
+.signupForm .box .inputBox textarea:focus ~ span,
+.signupForm .box .inputBox input:valid ~ span,
+.signupForm .box .inputBox textarea:valid ~ span {
+	transform: scale(1);
+}
+
