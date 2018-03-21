@@ -1,5 +1,10 @@
 $(document).ready(function(){
-	
+	/*preloader*/
+		var	overlay = document.getElementById('preloader');
+			window.addEventListener('load', function() {
+				overlay.style.display ='none';
+		});
+
 	/*Header text animation*/
 	    $('.topImage h1').textillate({
 	    	loop: true,
