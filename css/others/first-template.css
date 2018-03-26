@@ -1,7 +1,6 @@
 /* ------------------------------------------------------------------------------
    Preloader styles
 -------------------------------------------------------------------------------*/
-
 #preloader {
 	position: fixed;
 	top: 0;
@@ -20,10 +19,25 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	background: url('../../img/first-template/load.gif') no-repeat center center;
+	background: url('../../img/first-template/loading.gif') no-repeat center center;
 }
-
-
+/* ===========================================================
+						Go To Top
+=========================================================== */
+.gototop{
+	text-decoration:none;
+	color:#fff;
+	position:fixed;
+	bottom:1px;
+	right:5px;
+	z-index: 111;
+	font-size: 35px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	text-align: center;
+	background: linear-gradient(45deg, rgba(0,150,0,1), rgba(0,0,150,1));
+}
 /* ------------------------------------------------------------------------------
    Top Section
 -------------------------------------------------------------------------------*/
@@ -50,7 +64,7 @@
 	top: 50%;
 	transform: rotate(8deg);
 }
-@media screen and (max-width: 576px){
+@media screen and (max-width: 767px){
 	.topSection .jet{
 		display: none;
 	}
@@ -65,10 +79,16 @@
 	font-size: 50px;
 	font-weight: bold;
 	text-align: center;
+	animation: textAnimation 5s linear infinite;
 }
-@media screen and (max-width: 576px){
+@keyframes textAnimation{
+	0%{color: #fff;}
+	60%{color: yellow;}
+	100%{color: #fff;}
+}
+@media only screen and (max-width: 767px){
 	.topSection .rotate{
-		font-size: 20px;
+		font-size: 25px;
 	}
 }
 /* //////////////////////////// */
@@ -92,8 +112,22 @@
 	margin-bottom: 10px;
 	font-size: 20px;
 	font-weight:600;
+	position: relative;
+	overflow: hidden;
 }
-@media screen and (max-width: 576px){
+.topSection ul.countdown li:before {
+	content: '';
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,150,.2);
+	transform: skew(65deg);
+	transform-origin: left bottom;
+	box-shadow: 0 0 20px rgba(0,0,150,.3);
+}
+@media only screen and (max-width: 576px){
 	.topSection ul.countdown li {
 		width: 80px;
 		height: 40px;
@@ -111,10 +145,378 @@
 	margin-bottom: 0;
 	letter-spacing:3px;
 }
-
-
-
-
-.aaa{
-	height: 100vh;
+/* ==================================================
+					Navigation Bar
+================================================== */
+#menu {
+	padding: 20px;
+	transition: all 0.8s;
+	border-radius: 0;
+	margin-bottom: 0;
+	background-color: #fff;
+	border: none;
+	z-index: 9999;
 }
+#menu a.navbar-brand {
+	font-size: 20px;
+	color: rgba(255,255,255,0.7);
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+#menu a.navbar-brand i.fa {
+	font-size: 18px;
+	color: #54d0dd;
+	vertical-align: top;
+}
+#menu.navbar-default .navbar-nav > li > a {
+	text-transform: uppercase;
+	color: #54d0dd;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+#menu.navbar-default .navbar-nav > li > a:hover,
+#menu.navbar-default .navbar-nav > li.active > a {
+	color: #fff;
+	background: rgb(121,108,151) !important;
+}
+.on {
+	background-color: rgba(0,0,0,0.5) !important;
+	padding: 0 !important;
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+	color: #fff;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	color: #54d0dd !important;
+	background-color: transparent;
+}
+.navbar-toggle {
+	border-radius: 0;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	background-color: #54d0dd;
+	border-color: #54d0dd;
+}
+.navbar-default .navbar-toggle:hover>.icon-bar {
+	background-color: #FFF;
+}
+/* ------------------------------------------------------------------------------
+   Product Section
+-------------------------------------------------------------------------------*/
+.productSection{
+	width: 100%;
+	overflow: hidden;
+	background: url('../../img/bg4.jpg') no-repeat center center;
+	background-size: cover;
+}
+.productSection .textDiv{
+	background: #fff;
+	height: auto;
+	position: relative;
+	z-index: 1;
+	padding: 60px 60px 60px 200px;
+}
+@media only screen and (max-width: 576px){
+	.productSection .textDiv{
+		padding: 40px 20px;
+	}
+}
+.productSection .textDiv:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 30px;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	transform: skew(-10deg);
+	transform-origin: left bottom;
+	z-index: -1;
+}
+.productSection .textDiv:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 30px;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	transform: skew(10deg);
+	transform-origin: left top;
+	z-index: -1;
+}
+.productSection .textDiv h1{
+	margin-top: 0;
+}
+.productSection .textDiv p{
+	font-size: 18px;
+	line-height: 20px;
+	text-align: justify;
+}
+.productSection .mobileDiv{
+	height: 80vh;
+	position: relative;
+}
+.productSection .mobileDiv img{
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/* ===========================================================================
+					 Price Table User Interface Design
+=========================================================================== */
+.interfaceDesignSection {
+	padding: 50px 0;
+	background: #0f84d4 url('../../img/cloud2.png');
+	background-attachment: fixed;
+	animation: animatingThree 18s linear infinite;
+	position: relative;
+	overflow: hidden;
+}
+.interfaceDesignSection:before {
+	content: '';
+	position: absolute;
+	top:0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,.6);
+}
+@keyframes animatingThree {
+	0%{background-position: 0 0;}
+	100%{background-position: 1171px -639px;} /* img size is 1171x639 */
+}
+.interfaceDesignSection .offer{
+	color: #fff;
+	font-size: 40px;
+	margin: 0;
+	padding: 0;
+	z-index: 2;
+	position: relative;
+}
+.interfaceDesignSection .card {
+	padding: 30px 20px;
+	border-radius: 20px;
+	box-shadow: 0 10px 20px rgba(0,0,0,.5);
+	transition: .5s;
+	width: 300px;
+	margin: 30px auto;
+	position: relative;
+	overflow: hidden;
+	color: #fff;
+	border: 2px solid #fff000;
+}
+@media screen and (max-width: 576px){
+	.interfaceDesignSection .col-md-4 {
+		padding-right: 0;
+	    padding-left: 0;
+	    width: 100%;
+	}
+}
+.interfaceDesignSection .card .title .fa{
+	transition: 0.5s;
+}
+.interfaceDesignSection .card:hover .title .fa{
+	transform: scale(1.1) rotate(20deg);
+}
+.interfaceDesignSection .col-md-4:nth-child(1) .card,
+.interfaceDesignSection .col-md-4:nth-child(1) .card a:hover,
+.interfaceDesignSection .col-md-4:nth-child(1) .card .title .fa {
+	background: linear-gradient(-45deg, #f403d1, #64b5f6);
+}
+.interfaceDesignSection .col-md-4:nth-child(2) .card,
+.interfaceDesignSection .col-md-4:nth-child(2) .card a:hover,
+.interfaceDesignSection .col-md-4:nth-child(2) .card .title .fa {
+	background: linear-gradient(-45deg, #ffec61, #f321d7);
+}
+.interfaceDesignSection .col-md-4:nth-child(3) .card,
+.interfaceDesignSection .col-md-4:nth-child(3) .card a:hover,
+.interfaceDesignSection .col-md-4:nth-child(3) .card .title .fa {
+	background: linear-gradient(-45deg, #24ff72, #9a4eff);
+}
+.interfaceDesignSection .card:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40%;
+	background: rgba(255,255,255,.1);
+	transform: skewY(-22deg) scale(1.5);
+	z-index: 1;
+}
+.interfaceDesignSection .card .title .fa {
+	font-size: 60px;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	border-radius: 50%;
+	box-shadow: 0 10px 10px rgba(0,0,0,.2);
+}
+.interfaceDesignSection .card .title h2 {
+	font-size: 28px;
+	padding: 0;
+	margin: 20px 0 0;
+	z-index: 2;
+	position: relative;
+}
+.interfaceDesignSection .card .price {
+	z-index: 2;
+	position: relative;
+}
+.interfaceDesignSection .card .price h4{
+	margin: 0;
+	padding: 20px 0;
+	font-size: 60px;
+}
+.interfaceDesignSection .card .option {
+	z-index: 2;
+	position: relative;
+}
+.interfaceDesignSection .card .option ul li{
+	margin: 0 0 10px;
+}
+.interfaceDesignSection .card a {
+	z-index: 2;
+	position: relative;
+	color: #000;
+	background: #fff;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 40px;
+	font-size: 16px;
+	cursor: pointer;
+	box-shadow: 0 5px 10px rgba(0,0,0,.5);
+	transition: .5s;
+}
+.interfaceDesignSection .card a:hover {
+	box-shadow: 0 2px 5px rgba(0,0,0,.5);
+	color: red;
+	text-transform: uppercase;
+}
+.option .fa-times{
+	color:red;
+}
+/* ===========================================================
+					Google Map Section
+=========================================================== */
+.colorGoogleMap{
+	margin: 50px 0;
+}
+#map{
+	height: 500px;
+}
+@media screen and (max-width: 767px){
+	#map{
+		height: 300px;
+	}
+}
+/* ===========================================================
+					Newsletter Section
+=========================================================== */
+.newsLetter{
+	background: rgba(0,50,50,.5);
+	min-height: 450px;
+	overflow: hidden;
+	position: relative;
+	padding: 50px 0;
+}
+.newsLetter h1{
+	margin: 50px 0;
+	color: #fff;
+	font-size: 40px;
+	padding: 5px 0;
+	display: -webkit-inline-box;
+}
+.newsLetter p{
+	color: #fff;
+	font-size: 18px;
+	margin-bottom: 100px;
+}
+.newsLetter input{
+	height: 50px;
+	margin-bottom: 20px;
+	color: #000;
+}
+.newsLetter input[type="submit"]{
+	background: rgba(5,134,134,1);
+	font-size: 18px;
+	transition: 0.5s;
+}
+.newsLetter input[type="submit"]:hover{
+	background: rgba(6,103,103,1);
+	color: #fff;
+}
+/* ===========================================================================
+					 Clock & Social Icon Section
+=========================================================================== */
+.clockSocial {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	background: url('../../img/loginBg.jpg') no-repeat center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.clockSocial:before{
+	content: '';
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(45deg, rgba(150,0,0,0.5), rgba(0,150,0,0.5));
+}
+/* ///////////////////////////////////////// */
+.clockSocial .btnDiv{
+	background: rgba(255,255,255,.5);
+	padding: 50px 0;
+}
+.clockSocial a{
+	position: relative;
+	font-size: 100px;
+	font-weight: 700;
+	font-family: arial;
+	color: #fff;
+	display: inline-block;
+	width: 300px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	margin: 30px 0;
+}
+.clockSocial a:before{
+	content: 'MORE';
+	color: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	overflow: hidden;
+	transition: 0.9s;
+}
+.clockSocial a:hover:before{
+	width: 100%;
+}
+.clockSocial #clock{
+	margin-top: 45px;
+}
+
+
+
+
+
