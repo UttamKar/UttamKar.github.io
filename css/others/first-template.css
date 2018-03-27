@@ -256,20 +256,27 @@
 	margin-top: 0;
 }
 .productSection .textDiv p{
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 20px;
 	text-align: justify;
 }
-.productSection .mobileDiv{
-	height: 80vh;
-	position: relative;
+.slick-dots{
+	margin-top: 20px;
 }
-.productSection .mobileDiv img{
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 50px;
+    color: #fff;
+}
+.slick-carousel img{
 	display: block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	margin: 40% auto;
+}
+@media screen and (max-width: 992px){
+	.slick-carousel img{
+		display: block;
+		margin: 10% auto;
+	}
 }
 /* ===========================================================================
 					 Price Table User Interface Design
@@ -515,6 +522,8 @@
 .clockSocial #clock{
 	margin-top: 45px;
 }
+
+
 
 
 

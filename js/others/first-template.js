@@ -59,8 +59,20 @@ $(document).ready(function(){
 	        date: '12/15/2019 12:00:00' // m/d/y
 	    });
 
+	/*For product section*/
+	    $('.slick-carousel').slick({
+			autoplay: true,
+			dots: true,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 1,
+			adaptiveHeight: true,
+			prevArrow: false,
+			nextArrow: false
+		});
 
-	/*section 3 (clock)*/
+
+	/*Clock & Social Icon Section*/
 		var radialObj = radialIndicator('#clock', {
 		    radius: 80,
 		    barWidth: 10,
@@ -106,21 +118,19 @@ $(document).ready(function(){
 	        }
 	    });
 
-
     /*Smooth Scrolling*/
 		$('a.page-scroll').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 49
-            }, 900);
-            return false;
-          }
-        }
-      });
-
+	        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	          var target = $(this.hash);
+	          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	          if (target.length) {
+	            $('html,body').animate({
+	              scrollTop: target.offset().top - 49
+	            }, 900);
+	            return false;
+	          }
+	        }
+	      });
 
 	/*Navbar item select one by one on scroll*/
 		$(window).on('scroll', function(){
@@ -150,27 +160,6 @@ $(document).ready(function(){
 		});
 
 
-
-
-
-
-		/* ---------------------------------------------------------------------
-     Carousel
-     ---------------------------------------------------------------------= */
-
-    $('.main_home_slider').owlCarousel({
-        responsiveClass: true,
-        autoplay: false,
-        items: 1,
-        loop: true,
-        dots: true,
-        nav: false,
-        navText: [
-            "<i class='lnr lnr-chevron-left'></i>",
-            "<i class='lnr lnr-chevron-right'></i>"
-        ],
-        autoplayHoverPause: true
-
-    });
-	
+    
+		
 });
