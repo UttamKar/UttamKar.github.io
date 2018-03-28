@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/nivo-slider.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/others/first-template.css">
 </head>
@@ -178,9 +180,132 @@
     <!-- Price Table User Interface Design End -->
 
 
+	<!-- Nivo-slider Start -->
+		<section class="nivoSliderSection">
+			<div id="slider" class="nivoSlider"> 
+				<img src="img/first-template/n1.jpg" data-thumb="img/first-template/n1.jpg" alt="" title="#caption1"/> 
+				<img src="img/first-template/n3.jpg" data-thumb="img/first-template/n3.jpg" alt="" title="#caption2" />
+				<img src="img/first-template/n4.jpg" data-thumb="img/first-template/n4.jpg" alt="" title="#caption3" /> 
+				<img src="img/first-template/n2.jpg" data-thumb="img/first-template/n2.jpg" alt="" title="#caption4" /> 
+			</div>
+
+			<div id="caption1" class="nivo-html-caption">
+				<div class="textDiv wow fadeInUp" data-wow-delay=".3s">
+					<h1 class="">Slider 1</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</div>
+			</div>
+			<div id="caption2" class="nivo-html-caption wow slideInUp">
+				<div class="textDiv wow fadeInUp" data-wow-delay=".3s">
+					<h1 class="">Slider 2</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</div>
+			</div>
+			<div id="caption3" class="nivo-html-caption wow fadeInUp">
+				<div class="textDiv wow fadeInUp" data-wow-delay=".3s">
+					<h1 class="">Slider 3</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</div>
+			</div>
+			<div id="caption4" class="nivo-html-caption wow fadeInUp">
+				<div class="textDiv wow fadeInUp" data-wow-delay=".3s">
+					<h1 class="">Slider 4</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</div>
+			</div>
+		</section>
+	<!-- Nivo-slider End -->
+
+		
     <!-- different color google map Start -->
         <section class="colorGoogleMap" id="location">
-            <div id="map"></div>
+        	<div class="container-fluid">
+	        	<div class="row">
+	        		<div class="col-md-4 col-sm-6">
+	        			<div id="map"></div>
+	        		</div>
+	        		<div class="col-md-4 col-sm-6">
+	        			<div class="social-icon row">
+	        				<ul>
+			                	<li><a href="" class="wow bounceInUp" data-wow-duration="1s"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
+			                	<li><a href="" class="wow bounceInUp" data-wow-duration="2s"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			                	<li><a href="" class="wow bounceInUp" data-wow-duration="3s"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			                	<li><a href="" class="wow bounceInUp" data-wow-duration="4s"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+			                	<li><a href="" class="wow bounceInUp" data-wow-duration="5s"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+			                </ul>
+			            </div>
+	        		</div>
+	        		<div class="col-md-4 col-sm-6">
+	        			<div class="tab-body">
+
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+							    <li role="presentation" class="active">
+							    	<a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a>
+							    </li>
+							    <li role="presentation">
+							    	<a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a>
+							    </li>
+							</ul>
+
+							<!-- Tab panes -->
+							<div class="tab-content">
+							    <div role="tabpanel" class="tab-pane active" id="login">
+							    	<form action="#">
+										<div class="row form-group">
+											<div class="col-md-12">
+												<label for="username">Username or Email</label>
+												<input type="text" class="form-control" id="username">
+											</div>
+										</div>
+										<div class="row form-group">
+											<div class="col-md-12">
+												<label for="password">Password</label>
+												<input type="password" class="form-control" id="password">
+											</div>
+										</div>
+										<div class="row form-group">
+											<div class="col-md-12">
+												<label for="password2">Repeat Password</label>
+												<input type="password" class="form-control" id="password2">
+											</div>
+										</div>
+				
+										<div class="row form-group">
+											<div class="col-md-12">
+												<input type="submit" class="btn btn-info" value="Login">
+											</div>
+										</div>
+									</form>	
+							    </div>
+							    <div role="tabpanel" class="tab-pane" id="register">
+							    	<form action="#">
+										<div class="row form-group">
+											<div class="col-md-12">
+												<label for="username">Username or Email</label>
+												<input type="text" class="form-control" id="username">
+											</div>
+										</div>
+										<div class="row form-group">
+											<div class="col-md-12">
+												<label for="password">Password</label>
+												<input type="password" class="form-control" id="password">
+											</div>
+										</div>
+				
+										<div class="row form-group">
+											<div class="col-md-12">
+												<input type="submit" class="btn btn-info" value="Register">
+											</div>
+										</div>
+									</form>
+							    </div>
+							</div>
+
+						</div>
+	        		</div>
+	        	</div>
+            </div>
         </section>
     <!-- different color google map End -->
 
@@ -191,7 +316,7 @@
                 <div class="row text-center">
                     <div class="col-md-12">
                         <h1 class="wow zoomIn">SUBSCRIBE</h1>
-                        <p class="wow fadeInUp">Just stay tune for latest News. Now you can subscribe</p>
+                        <p class="wow fadeInUp">Just stay tune for latest News. Now you can subscribe.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -240,6 +365,7 @@
     <script src="js/jquery.simple-text-rotator.min.js"></script>
     <script src="js/jquery.downCount.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/nivo-slider.js"></script>
     <script src="js/plugins.js"></script>
     <!-- for clock section-->
     <script src="js/radialIndicator-master/radialIndicator.min.js"></script> 

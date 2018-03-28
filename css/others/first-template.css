@@ -223,7 +223,7 @@
 	z-index: 1;
 	padding: 60px 60px 60px 200px;
 }
-@media only screen and (max-width: 992px){
+@media screen and (max-width: 992px){
 	.productSection .textDiv{
 		padding: 40px 20px;
 	}
@@ -419,18 +419,91 @@
 	color:red;
 }
 /* ===========================================================
+					Nivo Slider Section
+=========================================================== */
+.nivoSliderSection{
+	overflow: hidden;
+}
+.nivoSliderSection .glyphicon{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 50%;
+	background: rgba(255,255,255,.5);
+	font-size: 20px;
+	transition: 0.5s;
+}
+.nivoSliderSection .glyphicon:hover{
+	background: rgba(255,255,255,1);
+}
+.glyphicon-arrow-left{
+	margin-left: 20px;
+}
+.glyphicon-arrow-right{
+	margin-right: 20px;
+}
+.nivo-caption{
+	text-align: center;
+	opacity: 1;
+	color: #000;
+	background: transparent;
+	width: 300px;
+	left: 50%;
+	top: 60%;
+	transform: translate(-50%, -50%);
+}
+.nivo-caption .textDiv{
+	background: #fff;
+	padding: 10px 0;
+}
+@media screen and (max-width: 767px){
+	.nivo-caption .textDiv{
+		display: none;
+	}
+}
+/* ===========================================================
 					Google Map Section
 =========================================================== */
 .colorGoogleMap{
-	margin: 50px 0;
+	padding: 100px 0;
+	background: rgba(0,0,0,0.02);
+	overflow: hidden;
 }
-#map{
-	height: 500px;
+.colorGoogleMap #map{
+	height: 345px;
 }
 @media screen and (max-width: 767px){
-	#map{
+	.colorGoogleMap #map{
 		height: 300px;
 	}
+}
+.colorGoogleMap .tab-body{
+	background: rgba(0,0,0,0.02);
+	border-radius: 10px;
+	overflow: hidden;
+}
+@media screen and (max-width: 767px){
+	.colorGoogleMap .tab-body{
+		margin-top: 50px;
+		border-left: 1px solid #ff0;
+		border-right: 1px solid #ff0;
+	}
+}
+.colorGoogleMap .tab-body .tab-content{
+	padding: 0 30px 20px;
+	margin-top: 50px;
+}
+.colorGoogleMap .tab-body ul.nav-tabs{
+	border-bottom: none;
+	margin-bottom: 20px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.colorGoogleMap .tab-body ul.nav-tabs>li>a{
+	border: none;
+	border-radius: 0;
 }
 /* ===========================================================
 					Newsletter Section
@@ -527,5 +600,57 @@
 
 
 
+
+
+
+/* social Icon */
+.colorGoogleMap .social-icon ul li{
+	display: inline-block;
+}
+.colorGoogleMap .social-icon ul li a{
+	margin: 10px;
+	height: 60px;
+	width: 60px;
+	display: block;
+	background: linear-gradient(0deg, #ddd, #fff);
+	padding: 12px;
+	border-radius: 50%;
+	transition: .5s;
+	box-shadow: 0 10px 15px rgba(0,0,0,.3);
+}
+.colorGoogleMap .social-icon ul li a:hover {
+	box-shadow: 0 2px 5px rgba(0,0,0,.3);
+}
+.colorGoogleMap .social-icon ul li a .fa {
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(0deg, #fff, #ddd);
+	color: #626262;
+	font-size: 20px;
+	text-align: center;
+	line-height: calc(60px - 24px);
+	border-radius: 50%;
+	transition: .5s;
+}
+.colorGoogleMap .social-icon ul li:nth-child(1) a:hover .fa {
+	color: #ff0084;
+	transform: scale(1.05);
+}
+.colorGoogleMap .social-icon ul li:nth-child(2) a:hover .fa {
+	color: #3b5999;
+	transform: scale(1.05);
+}
+.colorGoogleMap .social-icon ul li:nth-child(3) a:hover .fa {
+	color: #55acee;
+	transform: scale(1.05);
+}
+.colorGoogleMap .social-icon ul li:nth-child(4) a:hover .fa {
+	color: #0077B5;
+	transform: scale(1.05);
+}
+.colorGoogleMap .social-icon ul li:nth-child(5) a:hover .fa {
+	color: #dd4b39;
+	transform: scale(1.05);
+}
 
 

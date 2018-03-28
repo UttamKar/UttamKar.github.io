@@ -96,14 +96,6 @@ $(document).ready(function(){
 		$('.parallax-window').parallax();
 
 
-
-
-
-
-
-
-
-
 	/*Navbar fix at top on scroll*/
 	    $(window).bind('scroll', function() {
 	        var headerHeight = $('.topSection').outerHeight();
@@ -117,7 +109,6 @@ $(document).ready(function(){
 	            $('.navbar-default').removeClass('on');
 	        }
 	    });
-
     /*Smooth Scrolling*/
 		$('a.page-scroll').click(function() {
 	        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -131,7 +122,6 @@ $(document).ready(function(){
 	          }
 	        }
 	      });
-
 	/*Navbar item select one by one on scroll*/
 		$(window).on('scroll', function(){
 			var product = $('#product').offset().top;
@@ -158,6 +148,20 @@ $(document).ready(function(){
 			activeLi.addClass('active');
 			$('.navbar .nav>li').not(activeLi).removeClass('active');
 		});
+
+
+	/*Nivo Slider Activation*/
+		$('#slider').nivoSlider({
+			manualAdvance: false,
+			directionNav: true,
+			controlNav: false,
+			prevText: '<span class="glyphicon glyphicon-arrow-left"></span>',
+			nextText: '<span class="glyphicon glyphicon-arrow-right"></span>'
+		});
+	/*Wow Js activation*/
+		if ($(window).width() > 676) {
+	        new WOW().init();
+	    };
 
 
     
