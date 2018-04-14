@@ -1,0 +1,159 @@
+body {
+  background: #d0d0d0; }
+
+.top {
+  background: #894aa3;
+  height: 10px; }
+
+.navbar {
+  padding: 10px 0;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  margin-bottom: 0; }
+  .navbar ul li a {
+    font-weight: bold;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out; }
+    .navbar ul li a:hover {
+      color: #894aa3 !important; }
+
+.afterNav {
+  padding: 20px 125px;
+  text-align: center;
+  background: #ebebea; }
+  @media (max-width: 767px) {
+    .afterNav {
+      padding: 20px; } }
+  .afterNav p {
+    font-size: 22px;
+    line-height: 33px;
+    margin-bottom: 0; }
+
+.nivoSliderSection {
+  overflow: hidden; }
+  .nivoSliderSection .glyphicon {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #4f4f4f;
+    color: #4f4f4f;
+    background: #000;
+    font-size: 30px;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out; }
+    .nivoSliderSection .glyphicon:hover {
+      background: #fff; }
+  .nivoSliderSection .nivo-caption {
+    text-align: center;
+    opacity: 1;
+    color: #000;
+    background: transparent;
+    width: 300px;
+    left: 50%;
+    top: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    .nivoSliderSection .nivo-caption .textDiv {
+      background: #fff;
+      padding: 10px 0; }
+      @media (max-width: 767px) {
+        .nivoSliderSection .nivo-caption .textDiv {
+          display: none; } }
+
+.glyphicon-arrow-left {
+  margin-left: 20px; }
+
+.glyphicon-arrow-right {
+  margin-right: 20px; }
+
+.afterSlider {
+  background: #fff;
+  padding: 50px 35px;
+  position: relative; }
+  @media (max-width: 767px) {
+    .afterSlider {
+      padding: 50px 10px; } }
+  .afterSlider .mediaDiv {
+    margin-bottom: 20px; }
+    .afterSlider .mediaDiv .media-img {
+      position: absolute;
+      top: 0;
+      left: 10px; }
+    .afterSlider .mediaDiv .media-text {
+      margin-left: 60px; }
+      .afterSlider .mediaDiv .media-text h5 {
+        color: #894aa3;
+        font-size: 20px;
+        line-height: 24px;
+        margin-top: 0; }
+      .afterSlider .mediaDiv .media-text p {
+        text-align: justify; }
+
+.cardSection {
+  overflow: hidden;
+  background: #ebebea;
+  padding: 50px 30px; }
+  @media (max-width: 767px) {
+    .cardSection {
+      padding: 50px 0; } }
+  .cardSection .thumbnail {
+    padding: 10px; }
+    .cardSection .thumbnail h3 {
+      color: #894aa3; }
+
+.footerSection {
+  background: #fff;
+  padding: 50px 30px; }
+  .footerSection h5 {
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 15.5px;
+    color: #666666; }
+    @media (max-width: 1024px) {
+      .footerSection h5 {
+        margin-top: 50px; } }
+  .footerSection p {
+    margin-bottom: 3px;
+    color: #999999;
+    text-align: justify; }
+  .footerSection .linkText {
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 6px; }
+  .footerSection h6 {
+    font-weight: bold;
+    color: #999999; }
+  .footerSection a {
+    text-decoration: none;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out; }
+    .footerSection a:hover {
+      color: #894aa3; }
+  .footerSection .inputBg {
+    background: #e6e6e6; }
+
+.afterFooter {
+  padding: 25px 30px 20px;
+  background: #444444;
+  color: #fff; }
+

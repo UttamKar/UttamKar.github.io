@@ -61,11 +61,19 @@ body {
 }
 .contentSection .single-news img{
   width: 100%;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   height: auto;
 }
 .contentSection .single-news img:hover{
-  transform: scale(1.1);
+	-webkit-transform: scale(1.1); 
+	-moz-transform: scale(1.1); 
+	-ms-transform: scale(1.1); 
+	-o-transform: scale(1.1); 
+    transform: scale(1.1);
 }
 .contentSection .single-news a{
   text-decoration: none;

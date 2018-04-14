@@ -163,14 +163,6 @@ $(document).ready(function(){
 		}
 
 
-
-	/*YTPlayer Activation*/
-		jQuery("#bgndVideo").YTPlayer({
-			showYTLogo: false,
-		});
-
-
-
 	/*Oul-carousel Activation*/
 		$(".owl-carousel").owlCarousel({
 			loop: true,
@@ -193,16 +185,6 @@ $(document).ready(function(){
 		            nav:true
 		        }
 		    }
-		});
-
-
-	/*CUSTOM SCROLLBAR*/
-		$("html").niceScroll({
-		    mousescrollstep: 70,
-		    cursorcolor: "#ea9312",
-		    cursorwidth: "5px",
-		    cursorborderradius: "10px",
-		    cursorborder: "none",
 		});
 
 
