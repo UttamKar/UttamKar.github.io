@@ -78,9 +78,21 @@ $(document).ready(function(){
 		$(window).on('scroll', function(){
 			var scroll = $(window).scrollTop();
 			if(scroll > $('.socialIconSidebar').offset().top - ($(window).height()/2)){
-				$('.socialIconSidebar ul').css({'transform' : 'translate(0%, -50%)'});
+				$('.socialIconSidebar ul').css({
+					'-webkit-transform' : 'translate(0%, -50%)', 
+					'-moz-transform' : 'translate(0%, -50%)', 
+					'-ms-transform' : 'translate(0%, -50%)', 
+					'-o-transform' : 'translate(0%, -50%)', 
+					'transform' : 'translate(0%, -50%)'
+				});
 			}else{
-				$('.socialIconSidebar ul').css({'transform' : 'translate(-100%, -50%)'});
+				$('.socialIconSidebar ul').css({
+					'-webkit-transform' : 'translate(-100%, -50%)', 
+					'-moz-transform' : 'translate(-100%, -50%)', 
+					'-ms-transform' : 'translate(-100%, -50%)', 
+					'-o-transform' : 'translate(-100%, -50%)', 
+					'transform' : 'translate(-100%, -50%)'
+				});
 			}
 		});
 		$('.closeBtn').click(function(){

@@ -120,9 +120,17 @@ $(document).ready(function(){
 			var offset = Math.min(0, scroll - $('.cardSection').offset().top + $(window).height()/4);
 
 			$('.card-1').css({
+				'-webkit-transform' : 'translate('+ offset +'px, '+ Math.abs(offset * 0.5) +'px)', 
+				'-moz-transform' : 'translate('+ offset +'px, '+ Math.abs(offset * 0.5) +'px)', 
+				'-ms-transform' : 'translate('+ offset +'px, '+ Math.abs(offset * 0.5) +'px)', 
+				'-o-transform' : 'translate('+ offset +'px, '+ Math.abs(offset * 0.5) +'px)',
 				'transform' : 'translate('+ offset +'px, '+ Math.abs(offset * 0.5) +'px)'
 			});
 			$('.card-3').css({
+				'-webkit-transform' : 'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.5) +'px)', 
+				'-moz-transform' : 'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.5) +'px)', 
+				'-ms-transform' : 'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.5) +'px)', 
+				'-o-transform' : 'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.5) +'px)',
 				'transform' : 'translate('+ Math.abs(offset) +'px, '+ Math.abs(offset * 0.5) +'px)'
 			});
 		}

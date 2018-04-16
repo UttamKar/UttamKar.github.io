@@ -345,6 +345,10 @@
 	-ms-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
+	-webkit-box-shadow: -10px 10px 5px rgba(0,0,0,0.5);
+	-moz-box-shadow: -10px 10px 5px rgba(0,0,0,0.5);
+	-ms-box-shadow: -10px 10px 5px rgba(0,0,0,0.5);
+	-o-box-shadow: -10px 10px 5px rgba(0,0,0,0.5);
 	box-shadow: -10px 10px 5px rgba(0,0,0,0.5);
 }
 @media screen and (max-width: 767px){
@@ -401,6 +405,10 @@
 	-ms-transform: rotate(-30deg) skew(25deg) translate(20px, -20px);
 	-o-transform: rotate(-30deg) skew(25deg) translate(20px, -20px);
 	transform: rotate(-30deg) skew(25deg) translate(20px, -20px);
+	-webkit-box-shadow: -20px 20px 20px rgba(0,0,0,0.5);
+	-moz-box-shadow: -20px 20px 20px rgba(0,0,0,0.5);
+	-ms-box-shadow: -20px 20px 20px rgba(0,0,0,0.5);
+	-o-box-shadow: -20px 20px 20px rgba(0,0,0,0.5);
 	box-shadow: -20px 20px 20px rgba(0,0,0,0.5);
 }
 .footer .secondBlock .content a .fa{

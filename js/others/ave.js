@@ -52,13 +52,31 @@ $(document).ready(function(){
 		$(window).on('scroll', function(){
 			var scroll = $(window).scrollTop();
 			if(scroll > $('.socialIconSidebar').offset().top - ($(window).height()/2)){
-				$('.socialIconSidebar ul').css({'transform' : 'translate(-50%, -50%)'});
+				$('.socialIconSidebar ul').css({
+					'-webkit-transform' : 'translate(-50%, -50%)', 
+					'-moz-transform' : 'translate(-50%, -50%)', 
+					'-ms-transform' : 'translate(-50%, -50%)', 
+					'-o-transform' : 'translate(-50%, -50%)',
+					'transform' : 'translate(-50%, -50%)'
+				});
 			}else{
-				$('.socialIconSidebar ul').css({'transform' : 'translate(-100%, -50%)'});
+				$('.socialIconSidebar ul').css({
+					'-webkit-transform' : 'translate(-100%, -50%)', 
+					'-moz-transform' : 'translate(-100%, -50%)', 
+					'-ms-transform' : 'translate(-100%, -50%)', 
+					'-o-transform' : 'translate(-100%, -50%)',
+					'transform' : 'translate(-100%, -50%)'
+				});
 			}
 		});
 		$('.closeBtn').click(function(){
-			$('.socialIconSidebar ul li a').css({'transform' : 'translate(-100%, -50%) rotate(360deg)'});
+			$('.socialIconSidebar ul li a').css({
+				'-webkit-transform' : 'translate(-100%, -50%) rotate(360deg)', 
+				'-moz-transform' : 'translate(-100%, -50%) rotate(360deg)', 
+				'-ms-transform' : 'translate(-100%, -50%) rotate(360deg)', 
+				'-o-transform' : 'translate(-100%, -50%) rotate(360deg)',
+				'transform' : 'translate(-100%, -50%) rotate(360deg)'
+			});
 			$('.socialIconSidebar ul li:nth-child(1) a').css({'transition-delay' : '.1s'});
 			$('.socialIconSidebar ul li:nth-child(2) a').css({'transition-delay' : '.2s'});
 			$('.socialIconSidebar ul li:nth-child(3) a').css({'transition-delay' : '.3s'});
