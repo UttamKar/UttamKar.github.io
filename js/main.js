@@ -1,9 +1,6 @@
 $(document).ready(function(){
 	/*preloader*/
-		var	overlay = document.getElementById('preloader');
-			window.addEventListener('load', function() {
-				overlay.style.display ='none';
-		});
+		$('#preloader').fadeOut('slow');
 
 	/*Go To Top*/
 		$(window).scroll(function(){

@@ -1,52 +1,4 @@
 /* ===========================================================
-						Preloader
-=========================================================== */
-#preloader {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #fefefe;
-	z-index: 9999;
-	height: 100%;
-	height: 100%;
-}
-#status {
-	width: 200px;
-	height: 200px;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%); 
-	-moz-transform: translate(-50%, -50%); 
-	-ms-transform: translate(-50%, -50%); 
-	-o-transform: translate(-50%, -50%); 
-	transform: translate(-50%, -50%);
-	background: url(../img/load.gif) no-repeat center center;
-}
-/* ===========================================================
-						Go To Top
-=========================================================== */
-.gototop{
-	text-decoration:none;
-	color:#fff;
-	position:fixed;
-	bottom:1px;
-	right:5px;
-	z-index: 111;
-	font-size: 35px;
-	width: 40px;
-	height: 40px;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-ms-border-radius: 50%;
-	-o-border-radius: 50%;
-	border-radius: 50%;
-	text-align: center;
-	background: linear-gradient(45deg, rgba(0,150,0,1), rgba(0,0,150,1));
-}
-/* ===========================================================
 						Navigation Bar
 =========================================================== */
 .navbar-default {
@@ -1318,6 +1270,10 @@
 	display: block;
 }
 .clientFeedback .singleDiv:hover figure img{
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
 	transform: scale(1.1);
 }
 /* ===========================================================
@@ -1363,6 +1319,11 @@
 .newsLetter input[type="submit"]{
 	background: #D1C286;
 	font-size: 18px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
 }
 .newsLetter input[type="submit"]:hover{
 	background: #f1C286;

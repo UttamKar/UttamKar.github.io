@@ -1,10 +1,21 @@
 $(document).ready(function(){
 	/*preloader*/
-		var	overlay = document.getElementById('preloader');
-			window.addEventListener('load', function() {
-				overlay.style.display ='none';
-		});
+		$('#preloader').fadeOut('slow');
 
+
+	/*Go To Top*/
+		$(window).scroll(function(){
+			if($(this).scrollTop()>300){
+				$('.gototop').fadeIn();
+				}
+			else{
+				$('.gototop').fadeOut();
+			}
+		});
+		$('.gototop').click(function(){
+			$('html, body').animate({scrollTop:0}, 500);
+		});
+		
 	/*Header text animation*/
     $('.topImage h1').textillate({
     	loop: true,

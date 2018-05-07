@@ -1,7 +1,19 @@
 $(document).ready(function(){
 	/*preloader*/
-    	$( window ).on( "load", function() {
-			$("#preloader").delay(1000).fadeOut("slow");
+		$('#preloader').fadeOut('slow');
+
+
+	/*Go To Top*/
+		$(window).scroll(function(){
+			if($(this).scrollTop()>300){
+				$('.gototop').fadeIn();
+				}
+			else{
+				$('.gototop').fadeOut();
+			}
+		});
+		$('.gototop').click(function(){
+			$('html, body').animate({scrollTop:0}, 500);
 		});
 
 
