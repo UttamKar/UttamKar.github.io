@@ -17,19 +17,6 @@ $(document).ready(function(){
 		});
 
 
-	/*Go To Top*/
-		$(window).scroll(function(){
-			if($(this).scrollTop()>300){
-				$('.gototop').fadeIn();
-				}
-			else{
-				$('.gototop').fadeOut();
-			}
-		});
-		$('.gototop').click(function(){
-			$('html, body').animate({scrollTop:0}, 500);
-		});
-
 	/*Top Section*/
 		$(window).scroll(function(){
 			var scroll = parseInt($(this).scrollTop());
@@ -82,26 +69,6 @@ $(document).ready(function(){
 			prevArrow: false,
 			nextArrow: false
 		});
-
-
-	/*Clock & Social Icon Section*/
-		var radialObj = radialIndicator('#clock', {
-		    radius: 80,
-		    barWidth: 10,
-		    barColor: '#FF0000',
-		    minValue: 0,
-		    maxValue: 60,
-		    fontWeight: 'normal',
-		    roundCorner: true,
-		    format: function (value) {
-		        var date = new Date();
-		        return date.getHours() + ':' + date.getMinutes();
-		    }
-		});
-		 
-		setInterval(function () {
-		    radialObj.value(new Date().getSeconds() + 1);
-		}, 1000);
 
 
 	/*parallax effect activation*/
@@ -161,19 +128,35 @@ $(document).ready(function(){
 			$('.navbar .nav>li').not(activeLi).removeClass('active');
 		});
 
-
-	/*Nivo Slider Activation*/
-		$('#slider').nivoSlider({
-			manualAdvance: false,
-			directionNav: true,
-			controlNav: false,
-			prevText: '<span class="glyphicon glyphicon-arrow-left"></span>',
-			nextText: '<span class="glyphicon glyphicon-arrow-right"></span>'
-		});
 	/*Wow Js activation*/
 		if ($(window).width() > 676) {
 	        new WOW().init();
 	    };
+
+
+	/*Oul-carousel Activation*/
+		$(".clientFeedback .owl-carousel").owlCarousel({
+			loop: true,
+			autoplay: true,
+			/*center: true,
+			autoWidth: true,*/
+			nav: true,
+			navText: ['<span class="glyphicon glyphicon-chevron-left"></span>', '<span class="glyphicon glyphicon-chevron-right"></span>'],
+			slideBy: 1,
+			autoplayHoverPause : true,
+
+			responsiveClass:true,
+		    responsive:{
+		        0:{
+		            items:1,
+		            nav:true
+		        },
+		        576:{
+		            items:2,
+		            nav:true
+		        }
+		    }
+		});
 
 		
 });
