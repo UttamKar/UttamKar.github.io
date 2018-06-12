@@ -13,6 +13,7 @@
 }
 .logo img{
 	width: 60%;
+	margin-top: 10px;
 }
 @media screen and (max-width: 767px){
 	.logo img{
@@ -26,18 +27,28 @@
 	-ms-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
+    border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
 }
-.navbar-default .navbar-nav>li>a:focus,
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav > li > a:focus{
+	color: #fff;
+}
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav > li > a:hover{
     color: #00e0d0;
-    -webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	-ms-border-radius: 20px;
-	-o-border-radius: 20px;
-    border-radius: 20px;
-    border-color: #00e0d0;
-    background: linear-gradient(45deg, purple 30%, transparent 70%);
+	border-color: #00e0d0;
+    background: linear-gradient( rgba(0,150,0,.5), transparent, rgba(0,150,0,.5));
+} 
+@media screen and (max-width: 767px){
+	.navbar-default .navbar-nav>.active>a, 
+	.navbar-default .navbar-nav>.active>a:focus, 
+	.navbar-default .navbar-nav>.active>a:hover,
+	.navbar-default .navbar-nav > li > a:hover {
+	    border-color: transparent;
+	    background: transparent;
+	}
 }
 
 
@@ -300,6 +311,7 @@ hr {
 	background-size: cover;
 	background-attachment: fixed;
 	margin-top: 50px;
+	padding-bottom: 50px;
 }
 .teamSection #fifthContent {
 	color: #ffffff;
@@ -498,3 +510,5 @@ hr {
 .noMargin{
 	margin: 0 !important;
 }
+
+

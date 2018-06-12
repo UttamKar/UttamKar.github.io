@@ -19,17 +19,26 @@
 	transition: .5s;
     border-bottom: 2px solid transparent;
 }
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav>li>a:focus{
-    color: #00e0d0;
-    -webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	-ms-border-radius: 20px;
-	-o-border-radius: 20px;
-	border-radius: 20px;
-    border-color: #00e0d0;
-    background: linear-gradient(45deg, rgb(222,111,3), transparent);
+.navbar-default .navbar-nav > li > a:focus{
+	color: #fff;
 }
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav > li > a:hover{
+    color: #00e0d0;
+    -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+    border-color: #00e0d0;
+    background: linear-gradient(45deg, transparent, rgba(0,150,0,1));
+} 
 @media screen and (max-width: 767px){
+	.navbar-default .navbar-nav>.active>a, 
+	.navbar-default .navbar-nav>.active>a:focus, 
+	.navbar-default .navbar-nav>.active>a:hover,
 	.navbar-default .navbar-nav > li > a:hover {
 	    -webkit-border-radius: 0;
 		-moz-border-radius: 0;
@@ -37,7 +46,8 @@
 		-o-border-radius: 0;
 		border-radius: 0;
 	    border-color: transparent;
-		}
+	    background: transparent;
+	}
 }
 .hide-menu {
 	-webkit-transform: translateY(-100%); 
@@ -452,14 +462,14 @@
 
 
 /* ===========================================================
-				What I Do?
+				experties
 =========================================================== */
-.whatIDo{
+.experties{
 	 background: rgba(0,0,0,0.02);
 	 padding: 50px 0 100px;
 	 overflow: hidden;
 }
-.whatIDo h1{
+.experties h1{
 	margin: 50px 0 100px;
 	color: #000;
 	font-size: 40px;
@@ -468,7 +478,7 @@
 	padding: 5px 0;
 	display: -webkit-inline-box;
 }
-.whatIDo .single-work{
+.experties .single-work{
 	background: #fff;
 	padding: 20px 10px;
 	-webkit-border-radius: 10px;
@@ -483,10 +493,10 @@
 	-o-box-shadow: 0 0 20px rgba(100,100,100,.5);
 	box-shadow: 0 0 20px rgba(100,100,100,.5);
 }
-.whatIDo .single-work p{
+.experties .single-work p{
 	font-size: 16px;
 }
-.whatIDo .single-work img{
+.experties .single-work img{
 	height: 120px;
 	width: 120px;
 	-webkit-box-shadow: 0 10px 30px rgba(100,100,100,.5);
@@ -501,14 +511,14 @@
 	-o-transition: .5s;
 	transition: .5s;
 }
-.whatIDo .single-work:hover img{
+.experties .single-work:hover img{
 	-webkit-box-shadow: 0 0 5px rgba(100,100,100,.5);
 	-moz-box-shadow: 0 0 5px rgba(100,100,100,.5);
 	-ms-box-shadow: 0 0 5px rgba(100,100,100,.5);
 	-o-box-shadow: 0 0 5px rgba(100,100,100,.5);
 	box-shadow: 0 0 5px rgba(100,100,100,.5);
 }
-.whatIDo .single-work h3{
+.experties .single-work h3{
 	margin: 30px 0;
 	color: #000;
 }

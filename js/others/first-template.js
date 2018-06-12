@@ -105,10 +105,10 @@ $(document).ready(function(){
 		$(window).on('scroll', function(){
 			var product = $('#product').offset().top;
 			var offer = $('#offer').offset().top;
+			var feedback = $('#feedback').offset().top;
+			var newsLetter = $('#newsLetter').offset().top;
 			var location = $('#location').offset().top;
-			var contact = $('#contact').offset().top;
 			var activeLi;
-			console.log(offer);
 
 			var scroll = $(window).scrollTop();
 			var navbarHeight = $('.navbar').outerHeight();
@@ -117,12 +117,14 @@ $(document).ready(function(){
 				activeLi = $('.navbar .nav>li:nth-child(1)');
 			}else if(scroll < (offer - navbarHeight)){
 				activeLi = $('.navbar .nav>li:nth-child(2)');
-			}else if(scroll < (location - navbarHeight)){
+			}else if(scroll < (feedback - navbarHeight)){
 				activeLi = $('.navbar .nav>li:nth-child(3)');
-			}else if(scroll < (contact - navbarHeight)){
+			}else if(scroll < (newsLetter - navbarHeight)){
 				activeLi = $('.navbar .nav>li:nth-child(4)');
-			}else{
+			}else if(scroll < (location - navbarHeight)){
 				activeLi = $('.navbar .nav>li:nth-child(5)');
+			}else{
+				activeLi = $('.navbar .nav>li:nth-child(6)');
 			}
 			activeLi.addClass('active');
 			$('.navbar .nav>li').not(activeLi).removeClass('active');

@@ -142,6 +142,55 @@ $(document).ready(function(){
 		});
 
 
+	/*Navbar item select one by one on scroll*/
+		$(window).on('scroll', function(){
+			var education = $('#education').offset().top;
+			var experience = $('#experience').offset().top;
+			var experties = $('#experties').offset().top;
+			var works = $('#works').offset().top;
+			var latest = $('#latest').offset().top;
+			var skills = $('#skills').offset().top;
+			var contact = $('#contact').offset().top;
+			var activeLi;
+
+			var scroll = $(window).scrollTop();
+			var navbarHeight = $('.navbar').outerHeight();
+
+			if(scroll < (education - navbarHeight)){
+				activeLi = $('.navbar .nav>li:nth-child(1)');
+			}else if(scroll < (experience - navbarHeight)){
+				activeLi = $('.navbar .nav>li:nth-child(2)');
+			}else if(scroll < (experties - navbarHeight)){
+				activeLi = $('.navbar .nav>li:nth-child(3)');
+			}else if(scroll < (works - navbarHeight)){
+				activeLi = $('.navbar .nav>li:nth-child(4)');
+			}else if(scroll < (latest - navbarHeight)){
+				activeLi = $('.navbar .nav>li:nth-child(5)');
+			}else if(scroll < (skills - navbarHeight)){
+				activeLi = $('.navbar .nav>li:nth-child(6)');
+			}else if(scroll < (contact - navbarHeight)){
+				activeLi = $('.navbar .nav>li:nth-child(7)');
+			}else{
+				activeLi = $('.navbar .nav>li:nth-child(8)');
+			}
+			activeLi.addClass('active');
+			$('.navbar .nav>li').not(activeLi).removeClass('active');
+		});
+
+
+
+	/*Smooth Scrolling*/
+		$('.slide-section').click(function(e){
+			e.preventDefault();
+
+			var linkHref = $(this).attr('href');
+
+			$('body, html').animate({
+				scrollTop: $(linkHref).offset().top + 1
+			}, 1000);
+		});
+
+
 });
 
 

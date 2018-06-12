@@ -2,6 +2,7 @@ jQuery(document).ready(function($){
 	/*preloader*/
 		$('#preloader').fadeOut('slow');
 
+
 	/*Go To Top*/
 		$(window).scroll(function(){
 			if($(this).scrollTop()>300){
@@ -16,9 +17,12 @@ jQuery(document).ready(function($){
 		});
 	
 	/*Navbar button toggle*/
-		$('#navBar button').click(function(){
+		$('.navbar button').click(function(){
 			$(this).toggleClass('active');
-		});;
+		});
+		$('.navbar ul.nav li a').click(function(){
+			$('.navbar-collapse').removeClass('in');
+		});
 	
 
 
@@ -52,22 +56,71 @@ jQuery(document).ready(function($){
 	/*parallax effect activation*/
 		$('.parallax-window').parallax();
 
-	/*Wow Js activation*/
-		new WOW().init();
+	/* WOW activation */
+
+	    var wow = new WOW({
+	        mobile: false // trigger animations on mobile devices (default is true)
+	    });
+	    wow.init();
+
+
+
+
+
 		
 });
 
 
 
-/*Smooth Scrolling*/
-	$('.slide-section').click(function(e){
+
+	
+
+	/*Navbar item select one by one on scroll*/
+		$(window).on('scroll', function(){
+			var story = $('#story').offset().top;
+			var expertise = $('#expertise').offset().top;
+			var team = $('#team').offset().top;
+			var works = $('#works').offset().top;
+			var contact = $('#contact').offset().top;
+			var activeLi;
+
+			var scroll = $(window).scrollTop();
+			var navbarHeight = $('.navbar').outerHeight();
+
+			if(scroll < (story - navbarHeight)){
+				activeLi = $('.navbar .nav>li:nth-child(1)');
+			}else if(scroll < (expertise - navbarHeight)){
+				activeLi = $('.navbar .nav>li:nth-child(2)');
+			}else if(scroll < (team - navbarHeight)){
+				activeLi = $('.navbar .nav>li:nth-child(3)');
+			}else if(scroll < (works - navbarHeight)){
+				activeLi = $('.navbar .nav>li:nth-child(4)');
+			}else if(scroll < (contact - navbarHeight)){
+				activeLi = $('.navbar .nav>li:nth-child(5)');
+			}else{
+				activeLi = $('.navbar .nav>li:nth-child(6)');
+			}
+			activeLi.addClass('active');
+			$('.navbar .nav>li').not(activeLi).removeClass('active');
+		});
+
+
+
+	/*Smooth Scrolling*/
+		$('.slide-section').click(function(e){
 			e.preventDefault();
 
 			var linkHref = $(this).attr('href');
 
-			$('body, html').animate({
-				scrollTop: $(linkHref).offset().top - $('.navbar').outerHeight()
-			}, 1000);
+			if ($(window).width() < 767) {
+			   $('body, html').animate({
+					scrollTop: $(linkHref).offset().top - 50
+				}, 1000);
+			}
+			else {
+			   $('body, html').animate({
+					scrollTop: $(linkHref).offset().top - $('.navbar').outerHeight()+1
+				}, 1000);
+			}
+			
 		});
-
-
